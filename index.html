@@ -45,7 +45,7 @@
             font-weight: 700;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -173,7 +173,7 @@
         }
 
 
-        /* Statistics Dashboard */
+        /* Barra */
         .stats-dashboard {
             background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(44, 24, 16, 0.95) 100%);
             padding: var(--spacing-xl) 0;
@@ -279,7 +279,7 @@
             font-style: italic;
         }
 
-        /* Bar Chart */
+        /* Cuadro*/
         .bar-chart {
             display: flex;
             flex-direction: column;
@@ -324,7 +324,7 @@
             font-size: 0.9rem;
         }
 
-        /* Price Comparison */
+        /* Precios */
         .price-comparison {
             display: flex;
             flex-direction: column;
@@ -376,7 +376,7 @@
             font-size: 0.85rem;
         }
 
-        /* Growth Timeline */
+        /* Crecimietno*/
         .growth-viz {
             display: flex;
             justify-content: space-around;
@@ -446,7 +446,7 @@
             font-size: 0.85rem;
         }
 
-        /* Economic Impact */
+        /* Impacto EConomico */
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -484,7 +484,7 @@
             font-size: 0.9rem;
         }
 
-        /* Consumption Stats */
+        /* stats */
         .consumption-stats {
             display: flex;
             flex-direction: column;
@@ -562,7 +562,7 @@
             font-weight: 600;
         }
 
-        /* Market Opportunity */
+        /* Oportunidad de mercado*/
         .opportunity-content {
             display: flex;
             flex-direction: column;
@@ -621,7 +621,7 @@
             font-weight: bold;
         }
 
-        /* Responsive for stats */
+        /* celular */
         @media (max-width: 1200px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -633,7 +633,7 @@
         }
 
         @media (max-width: 768px) {
-            /* Stats Dashboard Mobile */
+            /* stats en mobile */
             .stats-dashboard {
                 padding: 3rem 0;
             }
@@ -675,7 +675,6 @@
                 font-size: 0.85rem;
             }
 
-            /* Viz Cards Mobile */
             .viz-card {
                 padding: 1.5rem;
             }
@@ -688,7 +687,6 @@
                 font-size: 0.8rem;
             }
 
-            /* Bar Chart Mobile */
             .bar-item {
                 grid-template-columns: 70px 1fr;
                 gap: 0.5rem;
@@ -707,7 +705,7 @@
                 padding-right: 0.5rem;
             }
 
-            /* Price Comparison Mobile */
+          
             .price-item {
                 flex-direction: row;
                 gap: 1rem;
@@ -725,7 +723,6 @@
                 font-size: 0.8rem;
             }
 
-            /* Growth Timeline Mobile */
             .growth-viz {
                 height: 180px;
                 gap: 0.5rem;
@@ -755,7 +752,7 @@
                 font-size: 0.75rem;
             }
 
-            /* Impact Grid Mobile */
+         
             .impact-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
@@ -773,7 +770,7 @@
                 font-size: 0.85rem;
             }
 
-            /* Consumption Stats Mobile */
+     
             .consumption-main {
                 padding: 1.5rem;
             }
@@ -804,7 +801,7 @@
                 font-size: 0.85rem;
             }
 
-            /* Opportunity Mobile */
+       
             .opportunity-stat {
                 padding: 1.2rem;
             }
@@ -829,7 +826,7 @@
         }
 
         @media (max-width: 480px) {
-            /* Extra Small Screens - Stats */
+            
             .metric-value {
                 font-size: 2rem;
             }
@@ -892,7 +889,7 @@
             }
         }
 
-        /* Filter Section */
+        /* Filtro*/
         .filter-section {
             background: rgba(28, 28, 28, 0.95);
             backdrop-filter: blur(20px) saturate(180%);
@@ -1014,7 +1011,7 @@
             font-weight: 300;
         }
 
-        /* Brewery Grid */
+       
         .brewery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1093,7 +1090,7 @@
             padding: 2rem;
         }
 
-        /* Special layout for cards with images */
+       
         .card-body-with-image {
             display: grid;
             grid-template-columns: 300px 1fr;
@@ -1297,13 +1294,13 @@
             color: white;
         }
 
-        /* Responsive */
+ 
         @media (max-width: 1024px) {
             .brewery-grid {
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             }
 
-            /* Smaller image on tablets */
+           
             .card-body-with-image {
                 grid-template-columns: 220px 1fr;
                 gap: 1.5rem;
@@ -1580,7 +1577,7 @@
             }
         }
 
-        /* Landscape Mobile */
+       
         @media (max-width: 896px) and (orientation: landscape) {
             .hero {
                 min-height: auto;
@@ -1611,7 +1608,6 @@
             }
         }
 
-        /* Ensure smooth scrolling and prevent overflow */
         html {
             scroll-behavior: smooth;
         }
@@ -1621,7 +1617,7 @@
             max-width: 100vw;
         }
 
-        /* Touch device optimization */
+     
         @media (hover: none) and (pointer: coarse) {
             .filter-btn,
             .brewery-card,
@@ -1644,7 +1640,7 @@
                 transform: translateY(-3px);
             }
 
-            /* Disable hover animations on touch devices */
+            
             .brewery-card:hover,
             .metric-card:hover,
             .viz-card:hover {
@@ -1656,14 +1652,14 @@
             }
         }
 
-        /* High DPI screens */
+        
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             .brewery-image {
                 image-rendering: -webkit-optimize-contrast;
             }
         }
 
-        /* Extra small screens */
+       
         @media (max-width: 480px) {
             .hero-title {
                 font-size: 2.2rem;
@@ -1837,7 +1833,7 @@
             }
         }
 
-        /* Reduced motion preference */
+    
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -1885,7 +1881,7 @@
             }
         }
 
-        /* Loading Animation */
+       
         @keyframes shimmer {
             0% { background-position: -1000px 0; }
             100% { background-position: 1000px 0; }
@@ -1933,7 +1929,7 @@
         </div>
     </section>
 
-    <!-- Statistics Section -->
+    <!-- Estadisticas -->
     <section class="stats-dashboard">
         <div class="stats-container">
             <div class="section-header">
@@ -1941,7 +1937,7 @@
                 <p class="section-subtitle">Datos clave del mercado de cerveza artesanal en Perú</p>
             </div>
 
-            <!-- Key Metrics Cards -->
+            <!-- Metricas -->
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-icon">📈</div>
@@ -1972,10 +1968,10 @@
                 </div>
             </div>
 
-            <!-- Data Visualizations Grid -->
+            <!-- Data Grid -->
             <div class="data-viz-grid">
                 
-                <!-- Consumption by Region -->
+                <!-- REgion -->
                 <div class="viz-card">
                     <h3 class="viz-title">🗺️ Regiones de Mayor Consumo</h3>
                     <div class="bar-chart">
@@ -2023,7 +2019,7 @@
                     <p class="viz-note">Fuente: SNI, Trome 2024</p>
                 </div>
 
-                <!-- Price Comparison -->
+               
                 <div class="viz-card">
                     <h3 class="viz-title">💰 Precios Promedio</h3>
                     <div class="price-comparison">
@@ -2055,7 +2051,7 @@
                     <p class="viz-note">Precios actualizados 2024-2025</p>
                 </div>
 
-                <!-- Growth Projection -->
+                <!-- Growth -->
                 <div class="viz-card">
                     <h3 class="viz-title">📊 Proyección de Crecimiento</h3>
                     <div class="growth-viz">
@@ -2083,7 +2079,7 @@
                     <p class="viz-note">Mercado total de cerveza - Informes de Expertos</p>
                 </div>
 
-                <!-- Economic Impact -->
+                <!-- Impacto economico -->
                 <div class="viz-card">
                     <h3 class="viz-title">💼 Impacto Económico</h3>
                     <div class="impact-grid">
@@ -2107,7 +2103,7 @@
                     <p class="viz-note">Fuente: SNI, Comité de Fabricantes 2025</p>
                 </div>
 
-                <!-- Consumption Stats -->
+                <!-- Consumo -->
                 <div class="viz-card">
                     <h3 class="viz-title">👥 Consumo Per Cápita</h3>
                     <div class="consumption-stats">
@@ -2134,7 +2130,7 @@
                     <p class="viz-note">Datos SNI 2024-2025</p>
                 </div>
 
-                <!-- Market Opportunity -->
+                <!-- Market -->
                 <div class="viz-card highlight-card">
                     <h3 class="viz-title">🚀 Oportunidad de Mercado</h3>
                     <div class="opportunity-content">
@@ -2160,7 +2156,7 @@
         </div>
     </section>
 
-    <!-- Filter Section -->
+    
     <section class="filter-section">
         <div class="filter-container">
             <div class="filter-buttons">
@@ -2177,7 +2173,7 @@
         </div>
     </section>
 
-    <!-- Main Content -->
+   
     <main class="main-content" id="cervecerias">
         <div class="section-header">
             <h2 class="section-title">Nuestras Cervecerías</h2>
