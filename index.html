@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cervezas Artesanales Peruanas - Tarea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Cervezas Artesanales Peruanas - Premium Craft Beer Experience</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -170,7 +173,7 @@
         }
 
 
-        /* dashboard estatico ni mover */
+        /* Statistics Dashboard */
         .stats-dashboard {
             background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(44, 24, 16, 0.95) 100%);
             padding: var(--spacing-xl) 0;
@@ -234,7 +237,7 @@
             font-size: 0.9rem;
         }
 
-        /* visualizacion de data importante  */
+        /* Data Visualizations */
         .data-viz-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -276,7 +279,7 @@
             font-style: italic;
         }
 
-        /* barra */
+        /* Bar Chart */
         .bar-chart {
             display: flex;
             flex-direction: column;
@@ -321,7 +324,7 @@
             font-size: 0.9rem;
         }
 
-        /* precio */
+        /* Price Comparison */
         .price-comparison {
             display: flex;
             flex-direction: column;
@@ -373,7 +376,7 @@
             font-size: 0.85rem;
         }
 
-        /* crecimiento */
+        /* Growth Timeline */
         .growth-viz {
             display: flex;
             justify-content: space-around;
@@ -443,7 +446,7 @@
             font-size: 0.85rem;
         }
 
-        /* econmia */
+        /* Economic Impact */
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -481,7 +484,7 @@
             font-size: 0.9rem;
         }
 
-        /* stats */
+        /* Consumption Stats */
         .consumption-stats {
             display: flex;
             flex-direction: column;
@@ -559,7 +562,7 @@
             font-weight: 600;
         }
 
-        /* mercado */
+        /* Market Opportunity */
         .opportunity-content {
             display: flex;
             flex-direction: column;
@@ -618,48 +621,278 @@
             font-weight: bold;
         }
 
-        /* celular */
-        @media (max-width: 1024px) {
-            .data-viz-grid {
-                grid-template-columns: 1fr;
-            }
-
+        /* Responsive for stats */
+        @media (max-width: 1200px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .data-viz-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
+            /* Stats Dashboard Mobile */
+            .stats-dashboard {
+                padding: 3rem 0;
+            }
+
+            .stats-container {
+                padding: 0 1rem;
+            }
+
+            .section-title {
+                font-size: clamp(2rem, 6vw, 3rem);
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
             .metrics-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .bar-item {
-                grid-template-columns: 80px 1fr;
+            .metric-card {
+                padding: 1.5rem;
             }
 
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .growth-viz {
-                height: 200px;
-            }
-
-            .timeline-value {
-                font-size: 0.8rem;
+            .metric-icon {
+                font-size: 2.5rem;
             }
 
             .metric-value {
                 font-size: 2.5rem;
             }
 
+            .metric-label {
+                font-size: 1rem;
+            }
+
+            .metric-sublabel {
+                font-size: 0.85rem;
+            }
+
+            /* Viz Cards Mobile */
+            .viz-card {
+                padding: 1.5rem;
+            }
+
+            .viz-title {
+                font-size: 1.2rem;
+            }
+
+            .viz-note {
+                font-size: 0.8rem;
+            }
+
+            /* Bar Chart Mobile */
+            .bar-item {
+                grid-template-columns: 70px 1fr;
+                gap: 0.5rem;
+            }
+
+            .bar-label {
+                font-size: 0.8rem;
+            }
+
+            .bar-container {
+                height: 32px;
+            }
+
+            .bar-value {
+                font-size: 0.75rem;
+                padding-right: 0.5rem;
+            }
+
+            /* Price Comparison Mobile */
+            .price-item {
+                flex-direction: row;
+                gap: 1rem;
+            }
+
+            .price-icon {
+                font-size: 2rem;
+            }
+
+            .price-amount {
+                font-size: 1.5rem;
+            }
+
+            .price-unit {
+                font-size: 0.8rem;
+            }
+
+            /* Growth Timeline Mobile */
+            .growth-viz {
+                height: 180px;
+                gap: 0.5rem;
+            }
+
+            .timeline-value {
+                font-size: 0.75rem;
+            }
+
+            .timeline-year {
+                font-size: 0.9rem;
+            }
+
+            .growth-rate {
+                padding: 0.8rem;
+            }
+
+            .rate-label {
+                font-size: 0.8rem;
+            }
+
+            .rate-value {
+                font-size: 1.5rem;
+            }
+
+            .rate-period {
+                font-size: 0.75rem;
+            }
+
+            /* Impact Grid Mobile */
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .impact-item {
+                padding: 1.2rem;
+            }
+
+            .impact-value {
+                font-size: 2rem;
+            }
+
+            .impact-label {
+                font-size: 0.85rem;
+            }
+
+            /* Consumption Stats Mobile */
+            .consumption-main {
+                padding: 1.5rem;
+            }
+
+            .consumption-number {
+                font-size: 3rem;
+            }
+
+            .consumption-unit {
+                font-size: 1rem;
+            }
+
+            .consumption-detail {
+                font-size: 0.85rem;
+            }
+
+            .consumption-stat {
+                padding: 0.8rem;
+            }
+
+            .stat-label,
+            .stat-value {
+                font-size: 0.9rem;
+            }
+
+            .comparison-note {
+                padding: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            /* Opportunity Mobile */
+            .opportunity-stat {
+                padding: 1.2rem;
+            }
+
+            .opportunity-label {
+                font-size: 0.9rem;
+            }
+
             .opportunity-percentage {
                 font-size: 3.5rem;
             }
+
+            .opportunity-insight {
+                font-size: 0.9rem;
+            }
+
+            .opportunity-list li {
+                font-size: 0.85rem;
+                padding: 0.4rem 0;
+                padding-left: 1.2rem;
+            }
         }
 
-        /* filtotrs */
+        @media (max-width: 480px) {
+            /* Extra Small Screens - Stats */
+            .metric-value {
+                font-size: 2rem;
+            }
+
+            .metric-icon {
+                font-size: 2rem;
+            }
+
+            .bar-item {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .bar-label {
+                font-size: 0.75rem;
+            }
+
+            .bar-container {
+                height: 28px;
+            }
+
+            .price-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .price-amount {
+                font-size: 1.3rem;
+            }
+
+            .growth-viz {
+                height: 150px;
+            }
+
+            .timeline-value {
+                font-size: 0.7rem;
+            }
+
+            .timeline-year {
+                font-size: 0.8rem;
+            }
+
+            .rate-value {
+                font-size: 1.3rem;
+            }
+
+            .impact-value {
+                font-size: 1.8rem;
+            }
+
+            .consumption-number {
+                font-size: 2.5rem;
+            }
+
+            .opportunity-percentage {
+                font-size: 2.8rem;
+            }
+
+            .viz-title {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Filter Section */
         .filter-section {
             background: rgba(28, 28, 28, 0.95);
             backdrop-filter: blur(20px) saturate(180%);
@@ -754,7 +987,7 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
-        /* main */
+        /* Main Content */
         .main-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -781,7 +1014,7 @@
             font-weight: 300;
         }
 
-        /* grilla */
+        /* Brewery Grid */
         .brewery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -1075,25 +1308,138 @@
                 grid-template-columns: 220px 1fr;
                 gap: 1.5rem;
             }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 7vw, 5rem);
+            }
         }
 
         @media (max-width: 768px) {
+            /* Hero Mobile */
+            .hero {
+                min-height: 80vh;
+                padding: 3rem 0;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+
             .hero-stats {
                 flex-direction: column;
                 gap: 2rem;
+                margin-top: 2.5rem;
             }
 
-            .brewery-grid {
-                grid-template-columns: 1fr;
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            .scroll-indicator {
+                bottom: 2rem;
+            }
+
+            .scroll-indicator svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            /* Filter Section Mobile */
+            .filter-section {
+                padding: 1.5rem 0;
+            }
+
+            .filter-section.is-stuck {
+                padding: 1rem 0;
             }
 
             .filter-container {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .filter-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.6rem;
+            }
+
+            .filter-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+                white-space: nowrap;
+            }
+
+            .search-box {
+                width: 100%;
             }
 
             .search-input {
                 width: 100%;
+                font-size: 0.9rem;
+                padding: 0.7rem 1.2rem 0.7rem 2.8rem;
+            }
+
+            .search-icon {
+                font-size: 0.9rem;
+            }
+
+            /* Main Content Mobile */
+            .main-content {
+                padding: 3rem 1rem;
+                padding-bottom: 4rem;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            /* Brewery Cards Mobile */
+            .brewery-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .brewery-card {
+                border-radius: 20px;
+            }
+
+            .card-header {
+                padding: 1.5rem;
+            }
+
+            .brewery-name {
+                font-size: 2rem;
+                flex-wrap: wrap;
+                gap: 0.8rem;
+            }
+
+            .brewery-icon {
+                font-size: 2rem;
+            }
+
+            .location-badge {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .card-body {
+                padding: 1.5rem;
             }
 
             /* Stack image and content vertically on mobile */
@@ -1105,6 +1451,437 @@
             .brewery-image-container {
                 max-width: 250px;
                 margin: 0 auto;
+            }
+
+            .brewery-image {
+                max-height: 350px;
+            }
+
+            .info-grid {
+                gap: 1.2rem;
+            }
+
+            .info-item {
+                padding: 0.9rem;
+            }
+
+            .info-icon {
+                font-size: 1.3rem;
+            }
+
+            .info-label {
+                font-size: 0.8rem;
+            }
+
+            .info-text {
+                font-size: 0.9rem;
+            }
+
+            .styles-container {
+                margin-top: 1.2rem;
+            }
+
+            .styles-list {
+                gap: 0.4rem;
+            }
+
+            .style-tag {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .reviews-section {
+                margin-top: 1.2rem;
+                padding-top: 1.2rem;
+            }
+
+            .review-item {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .review-item::before {
+                font-size: 2.5rem;
+                top: -8px;
+                left: 8px;
+            }
+
+            .review-author {
+                font-size: 0.85rem;
+            }
+
+            .card-footer {
+                padding: 1.2rem 1.5rem;
+                gap: 0.4rem;
+            }
+
+            .feature-badge {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Extra Small Screens */
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .brewery-name {
+                font-size: 1.8rem;
+            }
+
+            .brewery-icon {
+                font-size: 1.8rem;
+            }
+
+            .location-badge {
+                font-size: 0.8rem;
+            }
+
+            .info-label {
+                font-size: 0.75rem;
+            }
+
+            .info-text {
+                font-size: 0.85rem;
+            }
+
+            .style-tag {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.7rem;
+            }
+
+            .review-item {
+                font-size: 0.85rem;
+            }
+
+            .feature-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.7rem;
+            }
+        }
+
+        /* Landscape Mobile */
+        @media (max-width: 896px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .hero-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                justify-content: center;
+            }
+
+            .stat-item {
+                min-width: 150px;
+            }
+
+            .stats-dashboard {
+                padding: 2rem 0;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .data-viz-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        /* Ensure smooth scrolling and prevent overflow */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        /* Touch device optimization */
+        @media (hover: none) and (pointer: coarse) {
+            .filter-btn,
+            .brewery-card,
+            .metric-card,
+            .viz-card,
+            .impact-item {
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .filter-btn:active {
+                transform: scale(0.95);
+            }
+
+            .brewery-card:active {
+                transform: translateY(-5px) scale(0.98);
+            }
+
+            .metric-card:active,
+            .viz-card:active {
+                transform: translateY(-3px);
+            }
+
+            /* Disable hover animations on touch devices */
+            .brewery-card:hover,
+            .metric-card:hover,
+            .viz-card:hover {
+                transform: none;
+            }
+
+            .brewery-card {
+                transition: transform 0.2s ease;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .brewery-image {
+                image-rendering: -webkit-optimize-contrast;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .metric-value {
+                font-size: 2rem;
+            }
+
+            .viz-title {
+                font-size: 1.1rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .brewery-name {
+                font-size: 1.6rem;
+            }
+
+            .location-badge {
+                font-size: 0.8rem;
+            }
+
+            .bar-label {
+                font-size: 0.75rem;
+            }
+
+            .bar-container {
+                height: 28px;
+            }
+
+            .price-amount {
+                font-size: 1.3rem;
+            }
+
+            .opportunity-percentage {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* Landscape orientation mobile */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .hero-stats {
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+
+            .stats-dashboard {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            /* Remove hover effects that don't work on touch */
+            .brewery-card:hover {
+                transform: none;
+                box-shadow: 0 10px 30px rgba(212, 163, 115, 0.2);
+            }
+
+            .filter-btn:hover {
+                transform: none;
+            }
+
+            .info-item:hover {
+                transform: none;
+                background: rgba(255, 255, 255, 0.03);
+            }
+
+            .style-tag:hover {
+                transform: none;
+            }
+
+            .review-item:hover {
+                transform: none;
+            }
+
+            .metric-card:hover {
+                transform: none;
+            }
+
+            .impact-item:hover {
+                transform: none;
+            }
+
+            .price-item:hover {
+                transform: none;
+            }
+
+            /* Add active (tap) feedback instead */
+            .filter-btn:active {
+                transform: scale(0.96);
+                opacity: 0.8;
+            }
+
+            .brewery-card:active {
+                transform: scale(0.98);
+            }
+
+            .metric-card:active {
+                transform: scale(0.98);
+            }
+
+            /* Ensure touch targets are large enough (min 44x44px) */
+            .filter-btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+
+            .search-input {
+                min-height: 44px;
+            }
+
+            /* Better spacing for fat fingers */
+            .filter-buttons {
+                gap: 0.8rem;
+            }
+
+            .styles-list {
+                gap: 0.6rem;
+            }
+
+            /* Prevent zoom on focus for iOS */
+            .search-input {
+                font-size: 16px !important;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            /* Sharper borders and shadows */
+            .brewery-card {
+                border-width: 0.5px;
+            }
+
+            .viz-card {
+                border-width: 0.5px;
+            }
+
+            .metric-card {
+                border-width: 0.5px;
+            }
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .float-animation {
+                animation: none;
+            }
+
+            .scroll-indicator {
+                animation: none;
+            }
+
+            .bar-fill {
+                transition: none;
+            }
+
+            .timeline-bar {
+                transition: none;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .filter-section,
+            .scroll-indicator {
+                display: none;
+            }
+
+            .brewery-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            body {
+                background: white;
+            }
+
+            .brewery-card,
+            .viz-card,
+            .metric-card {
+                border: 1px solid #ccc;
             }
         }
 
@@ -1156,7 +1933,7 @@
         </div>
     </section>
 
-    <!-- EStadisticas -->
+    <!-- Statistics Section -->
     <section class="stats-dashboard">
         <div class="stats-container">
             <div class="section-header">
@@ -1164,7 +1941,7 @@
                 <p class="section-subtitle">Datos clave del mercado de cerveza artesanal en Perú</p>
             </div>
 
-            <!-- Cards MEtricas -->
+            <!-- Key Metrics Cards -->
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-icon">📈</div>
@@ -1195,10 +1972,10 @@
                 </div>
             </div>
 
-            <!-- datos -->
+            <!-- Data Visualizations Grid -->
             <div class="data-viz-grid">
                 
-                <!--region -->
+                <!-- Consumption by Region -->
                 <div class="viz-card">
                     <h3 class="viz-title">🗺️ Regiones de Mayor Consumo</h3>
                     <div class="bar-chart">
@@ -1246,7 +2023,7 @@
                     <p class="viz-note">Fuente: SNI, Trome 2024</p>
                 </div>
 
-                <!-- precio -->
+                <!-- Price Comparison -->
                 <div class="viz-card">
                     <h3 class="viz-title">💰 Precios Promedio</h3>
                     <div class="price-comparison">
@@ -1278,7 +2055,7 @@
                     <p class="viz-note">Precios actualizados 2024-2025</p>
                 </div>
 
-                <!-- crecimkeinto -->
+                <!-- Growth Projection -->
                 <div class="viz-card">
                     <h3 class="viz-title">📊 Proyección de Crecimiento</h3>
                     <div class="growth-viz">
@@ -1306,7 +2083,7 @@
                     <p class="viz-note">Mercado total de cerveza - Informes de Expertos</p>
                 </div>
 
-                <!-- economia -->
+                <!-- Economic Impact -->
                 <div class="viz-card">
                     <h3 class="viz-title">💼 Impacto Económico</h3>
                     <div class="impact-grid">
@@ -1330,7 +2107,7 @@
                     <p class="viz-note">Fuente: SNI, Comité de Fabricantes 2025</p>
                 </div>
 
-                <!-- stats -->
+                <!-- Consumption Stats -->
                 <div class="viz-card">
                     <h3 class="viz-title">👥 Consumo Per Cápita</h3>
                     <div class="consumption-stats">
@@ -1357,7 +2134,7 @@
                     <p class="viz-note">Datos SNI 2024-2025</p>
                 </div>
 
-                <!-- market -->
+                <!-- Market Opportunity -->
                 <div class="viz-card highlight-card">
                     <h3 class="viz-title">🚀 Oportunidad de Mercado</h3>
                     <div class="opportunity-content">
@@ -1383,7 +2160,7 @@
         </div>
     </section>
 
-    <!--filtro -->
+    <!-- Filter Section -->
     <section class="filter-section">
         <div class="filter-container">
             <div class="filter-buttons">
@@ -1770,7 +2547,7 @@
 
 
     <script>
-        // sticky
+        // Sticky filter bar effect
         const filterSection = document.querySelector('.filter-section');
         if (filterSection) {
             const observer = new IntersectionObserver(
@@ -1786,15 +2563,15 @@
             observer.observe(filterSection);
         }
 
-        // Filter 
+        // Filter functionality
         const filterButtons = document.querySelectorAll('.filter-btn');
         const breweryCards = document.querySelectorAll('.brewery-card');
 
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-               
+                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-               
+                // Add active class to clicked button
                 button.classList.add('active');
 
                 const filter = button.getAttribute('data-filter');
@@ -1826,7 +2603,7 @@
             });
         });
 
-       
+        // Search functionality
         const searchInput = document.getElementById('searchInput');
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
@@ -1849,7 +2626,7 @@
             });
         });
 
-   
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1863,7 +2640,7 @@
             });
         });
 
-     
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -1878,7 +2655,7 @@
             });
         }, observerOptions);
 
-        // cartas 1
+        // Observe all brewery cards
         breweryCards.forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
@@ -1886,7 +2663,7 @@
             observer.observe(card);
         });
 
-        // animacion cont
+        // Counter animation for stats
         const animateCounter = (element, target, duration) => {
             let current = 0;
             const increment = target / (duration / 16);
@@ -1901,7 +2678,7 @@
             }, 16);
         };
 
-        // JS porsiacaso
+        // Trigger counter animation when stats are visible
         const statObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1920,16 +2697,25 @@
             statObserver.observe(heroStats);
         }
 
-       
+        // Check if mobile for observer threshold
+        const isMobile = window.innerWidth <= 768;
+
+        // Animate bars and numbers when stats section comes into view
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-             
+                    // Detect if mobile
+                    const isMobileNow = window.innerWidth <= 768;
+                    const delay = prefersReducedMotion ? 0 : (isMobileNow ? 50 : 100);
+
+                    // Animate bar charts
                     const bars = entry.target.querySelectorAll('.bar-fill');
                     bars.forEach((bar, index) => {
                         setTimeout(() => {
                             bar.style.opacity = '1';
-                        }, index * 100);
+                        }, index * delay);
                     });
 
                     // Animate timeline bars
@@ -1937,7 +2723,7 @@
                     timelineBars.forEach((bar, index) => {
                         setTimeout(() => {
                             bar.style.opacity = '1';
-                        }, index * 200);
+                        }, index * (delay * 2));
                     });
 
                     // Animate metric cards
@@ -1946,31 +2732,125 @@
                         setTimeout(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'translateY(0)';
-                        }, index * 100);
+                        }, index * delay);
+                    });
+
+                    // Animate viz cards
+                    const vizCards = entry.target.querySelectorAll('.viz-card');
+                    vizCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, (index + 2) * delay);
                     });
 
                     statsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.2 });
+        }, { 
+            threshold: isMobile ? 0.05 : 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        });
 
-   
+        // Observe stats section
         const statsSection = document.querySelector('.stats-dashboard');
         if (statsSection) {
-           
+            // Set initial states
             document.querySelectorAll('.bar-fill').forEach(bar => {
                 bar.style.opacity = '0';
+                bar.style.transition = 'opacity 0.5s ease-out';
             });
             document.querySelectorAll('.timeline-bar').forEach(bar => {
                 bar.style.opacity = '0';
+                bar.style.transition = 'opacity 0.6s ease-out';
             });
             document.querySelectorAll('.metric-card').forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            document.querySelectorAll('.viz-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             });
             
             statsObserver.observe(statsSection);
+        }
+
+        // Optimize animations on resize
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                // Re-check mobile state
+                const nowMobile = window.innerWidth <= 768;
+                // Update any animation-dependent values if needed
+            }, 250);
+        });
+
+        // Reduce motion for users who prefer it
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.bar-fill, .timeline-bar, .metric-card, .viz-card').forEach(element => {
+                element.style.transition = 'none';
+            });
+        }
+
+        // Optimize scroll performance with RAF
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Prevent iOS zoom on input focus (keep font-size at 16px minimum)
+        if (isMobile && /iPhone|iPad|iPod/.test(navigator.userAgent)) {
+            const viewportMeta = document.querySelector('meta[name="viewport"]');
+            if (viewportMeta) {
+                viewportMeta.setAttribute('content', 
+                    'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+                );
+            }
+        }
+
+        // Smooth scrolling for browsers that don't support CSS scroll-behavior
+        if (!prefersReducedMotion && !('scrollBehavior' in document.documentElement.style)) {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Performance optimization: Lazy load images if IntersectionObserver is supported
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
         }
     </script>
 
