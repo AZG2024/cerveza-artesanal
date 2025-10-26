@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervezas Artesanales Peruanas - Premium Craft Beer Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #D4A373;
+            --color-secondary: #8B4513;
+            --color-accent: #F4A460;
+            --color-dark: #2C1810;
+            --color-light: #FFF8DC;
+            --color-gold: #FFD700;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--color-dark);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2013 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a0f0a 0%, #3d2817 50%, #1a0f0a 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(212, 163, 115, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(244, 164, 96, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            padding: 2rem;
+            animation: fadeInUp 1s var(--transition-smooth);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s var(--transition-smooth) 0.2s both;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--color-primary) 50%, var(--color-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s var(--transition-smooth) 0.4s both;
+        }
+
+        .hero-description {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s var(--transition-smooth) 0.6s both;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            animation: fadeInUp 1s var(--transition-smooth) 0.8s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--color-primary);
+            opacity: 0.7;
+        }
+
+
+        /* dashboard estatico ni mover */
+        .stats-dashboard {
+            background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(44, 24, 16, 0.95) 100%);
+            padding: var(--spacing-xl) 0;
+            border-top: 1px solid rgba(212, 163, 115, 0.2);
+            border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.1) 0%, rgba(244, 164, 96, 0.05) 100%);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 163, 115, 0.2);
+            border-color: var(--color-primary);
+        }
+
+        .metric-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .metric-sublabel {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* visualizacion de data importante  */
+        .data-viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .viz-card {
+            background: rgba(44, 24, 16, 0.6);
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .viz-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 30px rgba(212, 163, 115, 0.2);
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.15) 0%, rgba(244, 164, 96, 0.1) 100%);
+            border: 2px solid var(--color-primary);
+        }
+
+        .viz-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .viz-note {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        /* barra */
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .bar-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bar-label {
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            transition: width 1s ease-out;
+        }
+
+        .bar-value {
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* precio */
+        .price-comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .price-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid var(--color-primary);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .price-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .price-item.highlighted {
+            background: rgba(212, 163, 115, 0.15);
+            border-left-color: var(--color-gold);
+        }
+
+        .price-icon {
+            font-size: 2.5rem;
+        }
+
+        .price-type {
+            color: var(--color-primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .price-amount {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .price-unit {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        /* crecimiento */
+        .growth-viz {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 250px;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .timeline-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-year {
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            order: 3;
+        }
+
+        .timeline-value {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            order: 1;
+        }
+
+        .timeline-bar {
+            order: 2;
+            width: 100%;
+            background: linear-gradient(to top, var(--color-primary), var(--color-accent));
+            border-radius: 8px 8px 0 0;
+            transition: height 1s ease-out;
+            min-height: 60px;
+        }
+
+        .timeline-item.highlighted .timeline-bar {
+            background: linear-gradient(to top, var(--color-gold), var(--color-accent));
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .growth-rate {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .rate-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .rate-value {
+            color: var(--color-gold);
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 0.5rem;
+        }
+
+        .rate-period {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        /* econmia */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .impact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .impact-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+
+        .impact-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* stats */
+        .consumption-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .consumption-main {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.2), rgba(244, 164, 96, 0.1));
+            border-radius: 16px;
+        }
+
+        .consumption-number {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .consumption-unit {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .consumption-detail {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .consumption-secondary {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .consumption-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .stat-value {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .comparison-note {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .comparison-note span {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-note div {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* mercado */
+        .opportunity-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .opportunity-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .opportunity-label {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-percentage {
+            font-size: 5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--color-gold), var(--color-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .opportunity-insight {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .opportunity-insight strong {
+            color: var(--color-primary);
+        }
+
+        .opportunity-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .opportunity-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .opportunity-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        /* celular */
+        @media (max-width: 1024px) {
+            .data-viz-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bar-item {
+                grid-template-columns: 80px 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .growth-viz {
+                height: 200px;
+            }
+
+            .timeline-value {
+                font-size: 0.8rem;
+            }
+
+            .metric-value {
+                font-size: 2.5rem;
+            }
+
+            .opportunity-percentage {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* filtotrs */
+        .filter-section {
+            background: rgba(28, 28, 28, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .filter-section.is-stuck {
+            background: rgba(20, 20, 20, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .filter-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.8rem;
+            border: 2px solid rgba(212, 163, 115, 0.3);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s var(--transition-smooth);
+            text-transform: uppercase;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 163, 115, 0.3);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-color: var(--color-primary);
+            color: white;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 0.8rem 1.5rem;
+            padding-left: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(212, 163, 115, 0.3);
+            border-radius: 50px;
+            color: white;
+            font-size: 0.9rem;
+            width: 300px;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(212, 163, 115, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* main */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) 2rem;
+            padding-bottom: calc(var(--spacing-xl) * 1.5);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* grilla */
+        .brewery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .brewery-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(44, 24, 16, 0.9) 0%, rgba(61, 40, 23, 0.9) 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+            transition: all 0.5s var(--transition-smooth);
+            backdrop-filter: blur(10px);
+        }
+
+        .brewery-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s var(--transition-smooth);
+        }
+
+        .brewery-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .brewery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(212, 163, 115, 0.3);
+            border-color: var(--color-primary);
+        }
+
+        .card-header {
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.1) 0%, transparent 100%);
+        }
+
+        .brewery-name {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brewery-icon {
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(212, 163, 115, 0.5));
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(212, 163, 115, 0.2);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            border-radius: 50px;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        /* Special layout for cards with images */
+        .card-body-with-image {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .brewery-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(212, 163, 115, 0.2);
+        }
+
+        .brewery-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .brewery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .brewery-info {
+            flex: 1;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border-left: 3px solid var(--color-primary);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .styles-container {
+            margin-top: 1.5rem;
+        }
+
+        .styles-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .style-tag {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.2), rgba(244, 164, 96, 0.2));
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .style-tag:hover {
+            background: linear-gradient(135deg, rgba(212, 163, 115, 0.3), rgba(244, 164, 96, 0.3));
+            transform: translateY(-2px);
+        }
+
+        .reviews-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 163, 115, 0.2);
+        }
+
+        .review-item {
+            position: relative;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--color-gold);
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .review-item::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 3rem;
+            color: var(--color-primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .review-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .review-author {
+            display: block;
+            margin-top: 0.5rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+        }
+
+        .card-footer {
+            padding: 1.5rem 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        .feature-badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge-premium {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a0f0a;
+        }
+
+        .badge-tourist {
+            background: linear-gradient(135deg, #00CED1, #20B2AA);
+            color: white;
+        }
+
+        .badge-innovative {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+        }
+
+        .badge-fruity {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+        }
+
+        .badge-urban {
+            background: linear-gradient(135deg, #667EEA, #764BA2);
+            color: white;
+        }
+
+        .badge-national {
+            background: linear-gradient(135deg, #F093FB, #F5576C);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .brewery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+
+            /* Smaller image on tablets */
+            .card-body-with-image {
+                grid-template-columns: 220px 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .brewery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            /* Stack image and content vertically on mobile */
+            .card-body-with-image {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .brewery-image-container {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        .loading {
+            background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">Cervezas Artesanales del Perú</h1>
+            <p class="hero-description">
+                Análisis y estudio de las cervezas artesanales en Perú
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Cervecerías</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Estilos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Puntos de Venta</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- EStadisticas -->
+    <section class="stats-dashboard">
+        <div class="stats-container">
+            <div class="section-header">
+                <h2 class="section-title">La Industria en Números</h2>
+                <p class="section-subtitle">Datos clave del mercado de cerveza artesanal en Perú</p>
+            </div>
+
+            <!-- Cards MEtricas -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📈</div>
+                    <div class="metric-value">16%</div>
+                    <div class="metric-label">Crecimiento en 2024</div>
+                    <div class="metric-sublabel">Ventas sector artesanal</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">🍺</div>
+                    <div class="metric-value">2.9M</div>
+                    <div class="metric-label">Litros Producidos</div>
+                    <div class="metric-sublabel">Cerveza artesanal 2024</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">🏭</div>
+                    <div class="metric-value">~100</div>
+                    <div class="metric-label">Cervecerías</div>
+                    <div class="metric-sublabel">Grandes y artesanales</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">💼</div>
+                    <div class="metric-value">20K+</div>
+                    <div class="metric-label">Empleos Generados</div>
+                    <div class="metric-sublabel">Directos e indirectos</div>
+                </div>
+            </div>
+
+            <!-- datos -->
+            <div class="data-viz-grid">
+                
+                <!--region -->
+                <div class="viz-card">
+                    <h3 class="viz-title">🗺️ Regiones de Mayor Consumo</h3>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar-label">Lima</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 100%;">
+                                    <span class="bar-value">#1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Arequipa</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 75%;">
+                                    <span class="bar-value">#2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Trujillo</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 60%;">
+                                    <span class="bar-value">#3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Cusco</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 50%;">
+                                    <span class="bar-value">#4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Piura</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 40%;">
+                                    <span class="bar-value">#5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="viz-note">Fuente: SNI, Trome 2024</p>
+                </div>
+
+                <!-- precio -->
+                <div class="viz-card">
+                    <h3 class="viz-title">💰 Precios Promedio</h3>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-icon">🏪</div>
+                            <div class="price-details">
+                                <div class="price-type">Bodega</div>
+                                <div class="price-amount">S/ 5-7</div>
+                                <div class="price-unit">por botella 630ml</div>
+                            </div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-icon">🍻</div>
+                            <div class="price-details">
+                                <div class="price-type">Bar/Restaurante</div>
+                                <div class="price-amount">S/ 10-15</div>
+                                <div class="price-unit">por servicio</div>
+                            </div>
+                        </div>
+                        <div class="price-item highlighted">
+                            <div class="price-icon">⭐</div>
+                            <div class="price-details">
+                                <div class="price-type">Artesanal</div>
+                                <div class="price-amount">S/ 15-20</div>
+                                <div class="price-unit">por litro</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="viz-note">Precios actualizados 2024-2025</p>
+                </div>
+
+                <!-- crecimkeinto -->
+                <div class="viz-card">
+                    <h3 class="viz-title">📊 Proyección de Crecimiento</h3>
+                    <div class="growth-viz">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-value">$2.33 MM</div>
+                            <div class="timeline-bar" style="height: 60%;"></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2028</div>
+                            <div class="timeline-value">$2.7 MM</div>
+                            <div class="timeline-bar" style="height: 75%;"></div>
+                        </div>
+                        <div class="timeline-item highlighted">
+                            <div class="timeline-year">2034</div>
+                            <div class="timeline-value">$3.2 MM</div>
+                            <div class="timeline-bar" style="height: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="growth-rate">
+                        <span class="rate-label">CAGR:</span>
+                        <span class="rate-value">4.90%</span>
+                        <span class="rate-period">2025-2034</span>
+                    </div>
+                    <p class="viz-note">Mercado total de cerveza - Informes de Expertos</p>
+                </div>
+
+                <!-- economia -->
+                <div class="viz-card">
+                    <h3 class="viz-title">💼 Impacto Económico</h3>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="impact-value">1%</div>
+                            <div class="impact-label">del PBI Nacional</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-value">S/ 4,000M</div>
+                            <div class="impact-label">en impuestos anuales</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-value">300K</div>
+                            <div class="impact-label">bodegueros beneficiados</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-value">30%</div>
+                            <div class="impact-label">de ingresos de bodegas</div>
+                        </div>
+                    </div>
+                    <p class="viz-note">Fuente: SNI, Comité de Fabricantes 2025</p>
+                </div>
+
+                <!-- stats -->
+                <div class="viz-card">
+                    <h3 class="viz-title">👥 Consumo Per Cápita</h3>
+                    <div class="consumption-stats">
+                        <div class="consumption-main">
+                            <div class="consumption-number">43.5</div>
+                            <div class="consumption-unit">litros/año</div>
+                            <div class="consumption-detail">Promedio general</div>
+                        </div>
+                        <div class="consumption-secondary">
+                            <div class="consumption-stat">
+                                <span class="stat-label">Mayores de 18:</span>
+                                <span class="stat-value">~60 L</span>
+                            </div>
+                            <div class="consumption-stat">
+                                <span class="stat-label">Gasto anual:</span>
+                                <span class="stat-value">S/ 300-400</span>
+                            </div>
+                        </div>
+                        <div class="comparison-note">
+                            <span>Comparación regional:</span>
+                            <div>🇨🇴 Colombia: 55L | 🇲🇽 México: 65L</div>
+                        </div>
+                    </div>
+                    <p class="viz-note">Datos SNI 2024-2025</p>
+                </div>
+
+                <!-- market -->
+                <div class="viz-card highlight-card">
+                    <h3 class="viz-title">🚀 Oportunidad de Mercado</h3>
+                    <div class="opportunity-content">
+                        <div class="opportunity-stat">
+                            <div class="opportunity-label">Población que NO ha probado cerveza artesanal:</div>
+                            <div class="opportunity-percentage">99.5%</div>
+                        </div>
+                        <div class="opportunity-insight">
+                            <p>✨ <strong>Alto potencial de crecimiento</strong></p>
+                            <ul class="opportunity-list">
+                                <li>Mercado artesanal representa solo 0.01% del total</li>
+                                <li>Creciente demanda por productos premium</li>
+                                <li>Expansión de microcervecerías en regiones</li>
+                                <li>Mayor interés en ingredientes locales</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="viz-note">Análisis UCAP, Agraria.pe 2024</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--filtro -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="lima">Lima</button>
+                <button class="filter-btn" data-filter="norte">Norte</button>
+                <button class="filter-btn" data-filter="sur">Sur</button>
+                <button class="filter-btn" data-filter="sierra">Sierra</button>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Buscar cervecería..." id="searchInput">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="cervecerias">
+        <div class="section-header">
+            <h2 class="section-title">Nuestras Cervecerías</h2>
+            <p class="section-subtitle">Cada una con su historia única y sabores inolvidables</p>
+        </div>
+
+        <div class="brewery-grid" id="breweryGrid">
+            
+            <!-- Bohorquez -->
+            <article class="brewery-card" data-region="sur">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">🍺</span>
+                        Bohorquez
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Ica, Los Aquijes
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Microcervecería local con presencia en hostales y bares. Alcance regional en el sur del país.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Taproom propio, bares locales, hostales, venta directa por redes sociales</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">IPA</span>
+                            <span class="style-tag">Blonde Ale</span>
+                            <span class="style-tag">Red Ale</span>
+                            <span class="style-tag">Stout con Algarrobina</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Reseñas</div>
+                        <div class="review-item">
+                            Stout Con Algarrobina… 7% ABV
+                            <span class="review-author">— Untappd</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-innovative">🌟 Innovación Local</span>
+                </div>
+            </article>
+
+            <!-- Bardock Beer Company -->
+            <article class="brewery-card" data-region="sierra">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">🏔️</span>
+                        Bardock Beer
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Valle Sagrado, Urubamba (Cusco)
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Cervecería-taproom orientada al turismo con excelente posicionamiento entre visitantes extranjeros.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Taproom/restaurante propio, bares turísticos en Urubamba y Cusco</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">Lagers</span>
+                            <span class="style-tag">Stouts</span>
+                            <span class="style-tag">Cerveza con Hoja de Coca</span>
+                            <span class="style-tag">Experimentales</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Reseñas</div>
+                        <div class="review-item">
+                            Muy valorada en TripAdvisor por la experiencia turística y la ambientación única del Valle Sagrado
+                            <span class="review-author">— TripAdvisor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-tourist">✈️ Favorito Turístico</span>
+                    <span class="feature-badge badge-innovative">🌿 Ingredientes Locales</span>
+                </div>
+            </article>
+
+            <!-- Nowhere -->
+            <article class="brewery-card" data-region="sur">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">🌋</span>
+                        Nowhere
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Arequipa
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Brewpub local con excelente reputación. Popular entre jóvenes y turistas en la Ciudad Blanca.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Brewpub propio, restaurantes locales, ferias gastronómicas y eventos cerveceros</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">IPA</span>
+                            <span class="style-tag">Cream Ale con Maíz Morado</span>
+                            <span class="style-tag">Stouts</span>
+                            <span class="style-tag">Cervezas Frutadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Reconocimientos</div>
+                        <div class="review-item">
+                            Reconocida como una de las marcas más populares entre consumidores limeños de craft beer
+                            <span class="review-author">— Estudio ISIL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-innovative">🎨 Sabores Únicos</span>
+                    <span class="feature-badge badge-urban">🏙️ Escena Urbana</span>
+                </div>
+            </article>
+
+            <!-- Tierra Virgen -->
+            <article class="brewery-card" data-region="norte">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">🫐</span>
+                        Tierra Virgen
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Trujillo, La Libertad
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Marca regional con presencia activa en eventos cerveceros. Distribución concentrada en el norte del Perú.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Bares y restaurantes de Trujillo, eventos regionales, venta directa online</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">Blueberry Witbier</span>
+                            <span class="style-tag">Saisons</span>
+                            <span class="style-tag">Irish Red Ale</span>
+                            <span class="style-tag">Fruit Beers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Especialidad</div>
+                        <div class="review-item">
+                            Reconocida por su enfoque en cervezas frutales elaboradas con ingredientes locales del norte peruano
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-fruity">🍓 Cervezas Frutales</span>
+                    <span class="feature-badge badge-innovative">🌾 Ingredientes Regionales</span>
+                </div>
+            </article>
+
+            <!-- Nuevo Mundo -->
+            <article class="brewery-card" data-region="lima">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">🌊</span>
+                        Nuevo Mundo
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Lima, Miraflores
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Brewpub urbano muy bien valorado con ubicación estratégica. Alta visibilidad en redes sociales y circuito turístico.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Taproom/brewpub en Miraflores, bares aliados, eventos de cerveza artesanal en Lima</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">Pilsner</span>
+                            <span class="style-tag">IPA</span>
+                            <span class="style-tag">Porter</span>
+                            <span class="style-tag">Belgian Dark Ale</span>
+                            <span class="style-tag">Experimentales</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Reseñas</div>
+                        <div class="review-item">
+                            Excelente bar y sus cervezas son realmente artesanales. Los recomiendo.
+                            <span class="review-author">— J. Alfredo Saavedra</span>
+                        </div>
+                        <div class="review-item">
+                            Buen ambiente y buen servicio. Me pedí esta chela que recomiendo. 10% de alcohol 👍🏽
+                            <span class="review-author">— Noelia Wong</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-urban">🏙️ Ubicación Estratégica</span>
+                    <span class="feature-badge badge-premium">⭐ Alta Valoración</span>
+                </div>
+            </article>
+
+            <!-- Sierra Andina -->
+            <article class="brewery-card" data-region="sierra">
+                <div class="card-header">
+                    <h3 class="brewery-name">
+                        <span class="brewery-icon">⭐</span>
+                        Sierra Andina
+                    </h3>
+                    <span class="location-badge">
+                        <span>📍</span>
+                        Huaraz, Áncash
+                    </span>
+                </div>
+                
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-icon">📊</span>
+                            <div class="info-content">
+                                <div class="info-label">Datos Clave</div>
+                                <div class="info-text">Fundada en 2011. Más de 1,000 puntos de venta con distribución nacional y exportaciones ocasionales. Líder del mercado peruano.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">🏪</span>
+                            <div class="info-content">
+                                <div class="info-label">Puntos de Venta</div>
+                                <div class="info-text">Supermercados nacionales, tiendas de conveniencia, taprooms en Huaraz y Lima</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="styles-container">
+                        <div class="info-label">🍻 Estilos Disponibles</div>
+                        <div class="styles-list">
+                            <span class="style-tag">Shaman IPA</span>
+                            <span class="style-tag">Pachacutec Imperial Ale</span>
+                            <span class="style-tag">Inti Golden Ale</span>
+                            <span class="style-tag">Huaracina Pale Ale</span>
+                            <span class="style-tag">Coconut Porter</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-section">
+                        <div class="info-label">⭐ Reseñas</div>
+                        <div class="review-item">
+                            Sierra Andina, muy buenas.
+                            <span class="review-author">— Usuario Reddit</span>
+                        </div>
+                        <div class="review-item">
+                            Valorado 3.00 sobre 5. Los visitantes destacan la vista, la atención y la experiencia de degustación.
+                            <span class="review-author">— BarraGrau.pe / TripAdvisor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <span class="feature-badge badge-national">👑 Líder Nacional</span>
+                    <span class="feature-badge badge-premium">🌎 Exportación</span>
+                    <span class="feature-badge badge-tourist">📍 +1000 Puntos</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script>
+        // sticky
+        const filterSection = document.querySelector('.filter-section');
+        if (filterSection) {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.intersectionRatio < 1) {
+                        filterSection.classList.add('is-stuck');
+                    } else {
+                        filterSection.classList.remove('is-stuck');
+                    }
+                },
+                { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
+            );
+            observer.observe(filterSection);
+        }
+
+        // Filter 
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const breweryCards = document.querySelectorAll('.brewery-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+               
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+               
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                breweryCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        const region = card.getAttribute('data-region');
+                        if (region === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+       
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            breweryCards.forEach(card => {
+                const breweryName = card.querySelector('.brewery-name').textContent.toLowerCase();
+                const location = card.querySelector('.location-badge').textContent.toLowerCase();
+
+                if (breweryName.includes(searchTerm) || location.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        if (!card.style.opacity || card.style.opacity === '0') {
+                            card.style.display = 'none';
+                        }
+                    }, 300);
+                }
+            });
+        });
+
+   
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+     
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // cartas 1
+        breweryCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // animacion cont
+        const animateCounter = (element, target, duration) => {
+            let current = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (target === 6 ? '' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (target === 6 ? '' : '+');
+                }
+            }, 16);
+        };
+
+        // JS porsiacaso
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = document.querySelectorAll('.stat-number');
+                    const targets = [6, 20, 1000];
+                    statNumbers.forEach((stat, index) => {
+                        animateCounter(stat, targets[index], 2000);
+                    });
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statObserver.observe(heroStats);
+        }
+
+       
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+             
+                    const bars = entry.target.querySelectorAll('.bar-fill');
+                    bars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            bar.style.opacity = '1';
+                        }, index * 100);
+                    });
+
+                    // Animate timeline bars
+                    const timelineBars = entry.target.querySelectorAll('.timeline-bar');
+                    timelineBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            bar.style.opacity = '1';
+                        }, index * 200);
+                    });
+
+                    // Animate metric cards
+                    const metricCards = entry.target.querySelectorAll('.metric-card');
+                    metricCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+   
+        const statsSection = document.querySelector('.stats-dashboard');
+        if (statsSection) {
+           
+            document.querySelectorAll('.bar-fill').forEach(bar => {
+                bar.style.opacity = '0';
+            });
+            document.querySelectorAll('.timeline-bar').forEach(bar => {
+                bar.style.opacity = '0';
+            });
+            document.querySelectorAll('.metric-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+            });
+            
+            statsObserver.observe(statsSection);
+        }
+    </script>
+
+</body>
+</html>
