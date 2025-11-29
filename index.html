@@ -2,2853 +2,478 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Cervezas Artesanales Peruanas - Tarea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamaTok - Tus lives de TikTok ahora serán diferentes</title>
+     <link rel="icon" type="image/x-icon" href="logo.png">
+
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Potencia tus lives de TikTok con GamaTok. Conecta tu tienda de Gamarra con miles de clientes. Landing page personalizada con calendario de lives, registro de clientes y más. Solo S/299">
+    <meta name="keywords" content="TikTok Live, Gamarra, ventas online, landing page, lives TikTok, tienda virtual">
+    <meta name="author" content="GamaTok">
+
+    <!-- Open Graph Meta Tags para WhatsApp, Facebook, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamatok.com">
+    <meta property="og:title" content="GamaTok - Lleva tus Lives de TikTok a miles de personas">
+    <meta property="og:description" content="🚀 Te ayudamos a que tus Lives en TikTok lleguen a miles de personas. Landing page personalizada + Calendario de Lives + Registro de clientes. ¡Solo S/299! 🎯">
+    <meta property="og:image" content="https://i.imgur.com/your-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GamaTok - Potencia tus Lives de TikTok">
+    <meta property="og:site_name" content="GamaTok">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GamaTok - Lleva tus Lives de TikTok a miles de personas">
+    <meta name="twitter:description" content="🚀 Te ayudamos a que tus Lives en TikTok lleguen a miles de personas. Landing page personalizada + Calendario de Lives + Registro de clientes. ¡Solo S/299! 🎯">
+    <meta name="twitter:image" content="https://i.imgur.com/your-image.jpg">
+
+    <!-- WhatsApp Specific -->
+    <meta property="og:image:type" content="image/jpeg">
+
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-primary: #D4A373;
-            --color-secondary: #8B4513;
-            --color-accent: #F4A460;
-            --color-dark: #2C1810;
-            --color-light: #FFF8DC;
-            --color-gold: #FFD700;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--color-dark);
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2013 100%);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-        }
-
-        /* Hero */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #1a0f0a 0%, #3d2817 50%, #1a0f0a 100%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(212, 163, 115, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(244, 164, 96, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(139, 69, 19, 0.1) 0%, transparent 50%);
-            opacity: 0.6;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 1200px;
-            padding: 2rem;
-            animation: fadeInUp 1s var(--transition-smooth);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--color-primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s var(--transition-smooth) 0.2s both;
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 7rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, var(--color-primary) 50%, var(--color-gold) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInUp 1s var(--transition-smooth) 0.4s both;
-        }
-
-        .hero-description {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 1s var(--transition-smooth) 0.6s both;
-            font-weight: 300;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin-top: 4rem;
-            animation: fadeInUp 1s var(--transition-smooth) 0.8s both;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-
-        .scroll-indicator svg {
-            width: 30px;
-            height: 30px;
-            stroke: var(--color-primary);
-            opacity: 0.7;
-        }
-
-
-        /* Barra */
-        .stats-dashboard {
-            background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(44, 24, 16, 0.95) 100%);
-            padding: var(--spacing-xl) 0;
-            border-top: 1px solid rgba(212, 163, 115, 0.2);
-            border-bottom: 1px solid rgba(212, 163, 115, 0.2);
-        }
-
-        .stats-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .metric-card {
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.1) 0%, rgba(244, 164, 96, 0.05) 100%);
-            border: 1px solid rgba(212, 163, 115, 0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .metric-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(212, 163, 115, 0.2);
-            border-color: var(--color-primary);
-        }
-
-        .metric-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .metric-value {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-label {
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .metric-sublabel {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-
-        /* Data Visualizations */
-        .data-viz-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .viz-card {
-            background: rgba(44, 24, 16, 0.6);
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .viz-card:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 10px 30px rgba(212, 163, 115, 0.2);
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.15) 0%, rgba(244, 164, 96, 0.1) 100%);
-            border: 2px solid var(--color-primary);
-        }
-
-        .viz-title {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .viz-note {
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-style: italic;
-        }
-
-        /* Cuadro*/
-        .bar-chart {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .bar-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .bar-label {
-            color: white;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .bar-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            height: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .bar-fill {
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-            height: 100%;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 1rem;
-            transition: width 1s ease-out;
-        }
-
-        .bar-value {
-            color: white;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        /* Precios */
-        .price-comparison {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .price-item {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border-left: 3px solid var(--color-primary);
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .price-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateX(5px);
-        }
-
-        .price-item.highlighted {
-            background: rgba(212, 163, 115, 0.15);
-            border-left-color: var(--color-gold);
-        }
-
-        .price-icon {
-            font-size: 2.5rem;
-        }
-
-        .price-type {
-            color: var(--color-primary);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-
-        .price-amount {
-            color: white;
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .price-unit {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85rem;
-        }
-
-        /* Crecimietno*/
-        .growth-viz {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            height: 250px;
-            margin-bottom: 2rem;
-            gap: 1rem;
-        }
-
-        .timeline-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .timeline-year {
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-            order: 3;
-        }
-
-        .timeline-value {
-            color: var(--color-primary);
-            font-weight: 700;
-            font-size: 0.95rem;
-            order: 1;
-        }
-
-        .timeline-bar {
-            order: 2;
-            width: 100%;
-            background: linear-gradient(to top, var(--color-primary), var(--color-accent));
-            border-radius: 8px 8px 0 0;
-            transition: height 1s ease-out;
-            min-height: 60px;
-        }
-
-        .timeline-item.highlighted .timeline-bar {
-            background: linear-gradient(to top, var(--color-gold), var(--color-accent));
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .growth-rate {
-            text-align: center;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-        }
-
-        .rate-label {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-
-        .rate-value {
-            color: var(--color-gold);
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0 0.5rem;
-        }
-
-        .rate-period {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85rem;
-        }
-
-        /* Impacto EConomico */
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .impact-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .impact-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--color-primary);
-            transform: scale(1.05);
-        }
-
-        .impact-value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .impact-label {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-        }
-
-        /* stats */
-        .consumption-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .consumption-main {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.2), rgba(244, 164, 96, 0.1));
-            border-radius: 16px;
-        }
-
-        .consumption-number {
-            font-size: 4rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-
-        .consumption-unit {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .consumption-detail {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        .consumption-secondary {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .consumption-stat {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-        }
-
-        .stat-label {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .stat-value {
-            color: var(--color-primary);
-            font-weight: 700;
-        }
-
-        .comparison-note {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .comparison-note span {
-            display: block;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .comparison-note div {
-            color: white;
-            font-weight: 600;
-        }
-
-        /* Oportunidad de mercado*/
-        .opportunity-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .opportunity-stat {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-        }
-
-        .opportunity-label {
-            color: white;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .opportunity-percentage {
-            font-size: 5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--color-gold), var(--color-accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-
-        .opportunity-insight {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .opportunity-insight strong {
-            color: var(--color-primary);
-        }
-
-        .opportunity-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
-        }
-
-        .opportunity-list li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .opportunity-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--color-primary);
-            font-weight: bold;
-        }
-
-        /* celular */
-        @media (max-width: 1200px) {
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .data-viz-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* stats en mobile */
-            .stats-dashboard {
-                padding: 3rem 0;
-            }
-
-            .stats-container {
-                padding: 0 1rem;
-            }
-
-            .section-title {
-                font-size: clamp(2rem, 6vw, 3rem);
-            }
-
-            .section-subtitle {
-                font-size: 1rem;
-            }
-
-            .metrics-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .metric-card {
-                padding: 1.5rem;
-            }
-
-            .metric-icon {
-                font-size: 2.5rem;
-            }
-
-            .metric-value {
-                font-size: 2.5rem;
-            }
-
-            .metric-label {
-                font-size: 1rem;
-            }
-
-            .metric-sublabel {
-                font-size: 0.85rem;
-            }
-
-            .viz-card {
-                padding: 1.5rem;
-            }
-
-            .viz-title {
-                font-size: 1.2rem;
-            }
-
-            .viz-note {
-                font-size: 0.8rem;
-            }
-
-            .bar-item {
-                grid-template-columns: 70px 1fr;
-                gap: 0.5rem;
-            }
-
-            .bar-label {
-                font-size: 0.8rem;
-            }
-
-            .bar-container {
-                height: 32px;
-            }
-
-            .bar-value {
-                font-size: 0.75rem;
-                padding-right: 0.5rem;
-            }
-
-          
-            .price-item {
-                flex-direction: row;
-                gap: 1rem;
-            }
-
-            .price-icon {
-                font-size: 2rem;
-            }
-
-            .price-amount {
-                font-size: 1.5rem;
-            }
-
-            .price-unit {
-                font-size: 0.8rem;
-            }
-
-            .growth-viz {
-                height: 180px;
-                gap: 0.5rem;
-            }
-
-            .timeline-value {
-                font-size: 0.75rem;
-            }
-
-            .timeline-year {
-                font-size: 0.9rem;
-            }
-
-            .growth-rate {
-                padding: 0.8rem;
-            }
-
-            .rate-label {
-                font-size: 0.8rem;
-            }
-
-            .rate-value {
-                font-size: 1.5rem;
-            }
-
-            .rate-period {
-                font-size: 0.75rem;
-            }
-
-         
-            .impact-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .impact-item {
-                padding: 1.2rem;
-            }
-
-            .impact-value {
-                font-size: 2rem;
-            }
-
-            .impact-label {
-                font-size: 0.85rem;
-            }
-
-     
-            .consumption-main {
-                padding: 1.5rem;
-            }
-
-            .consumption-number {
-                font-size: 3rem;
-            }
-
-            .consumption-unit {
-                font-size: 1rem;
-            }
-
-            .consumption-detail {
-                font-size: 0.85rem;
-            }
-
-            .consumption-stat {
-                padding: 0.8rem;
-            }
-
-            .stat-label,
-            .stat-value {
-                font-size: 0.9rem;
-            }
-
-            .comparison-note {
-                padding: 0.8rem;
-                font-size: 0.85rem;
-            }
-
-       
-            .opportunity-stat {
-                padding: 1.2rem;
-            }
-
-            .opportunity-label {
-                font-size: 0.9rem;
-            }
-
-            .opportunity-percentage {
-                font-size: 3.5rem;
-            }
-
-            .opportunity-insight {
-                font-size: 0.9rem;
-            }
-
-            .opportunity-list li {
-                font-size: 0.85rem;
-                padding: 0.4rem 0;
-                padding-left: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            
-            .metric-value {
-                font-size: 2rem;
-            }
-
-            .metric-icon {
-                font-size: 2rem;
-            }
-
-            .bar-item {
-                grid-template-columns: 60px 1fr;
-            }
-
-            .bar-label {
-                font-size: 0.75rem;
-            }
-
-            .bar-container {
-                height: 28px;
-            }
-
-            .price-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .price-amount {
-                font-size: 1.3rem;
-            }
-
-            .growth-viz {
-                height: 150px;
-            }
-
-            .timeline-value {
-                font-size: 0.7rem;
-            }
-
-            .timeline-year {
-                font-size: 0.8rem;
-            }
-
-            .rate-value {
-                font-size: 1.3rem;
-            }
-
-            .impact-value {
-                font-size: 1.8rem;
-            }
-
-            .consumption-number {
-                font-size: 2.5rem;
-            }
-
-            .opportunity-percentage {
-                font-size: 2.8rem;
-            }
-
-            .viz-title {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Filtro*/
-        .filter-section {
-            background: rgba(28, 28, 28, 0.95);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 2rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(212, 163, 115, 0.2);
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .filter-section.is-stuck {
-            background: rgba(20, 20, 20, 0.98);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-            padding: 1.5rem 0;
-            border-bottom: 2px solid var(--color-primary);
-        }
-
-        .filter-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.8rem 1.8rem;
-            border: 2px solid rgba(212, 163, 115, 0.3);
-            background: transparent;
-            color: rgba(255, 255, 255, 0.7);
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s var(--transition-smooth);
-            text-transform: uppercase;
-        }
-
-        .filter-btn:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(212, 163, 115, 0.3);
-        }
-
-        .filter-btn.active {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-            border-color: var(--color-primary);
-            color: white;
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-        .search-input {
-            padding: 0.8rem 1.5rem;
-            padding-left: 3rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(212, 163, 115, 0.3);
-            border-radius: 50px;
-            color: white;
-            font-size: 0.9rem;
-            width: 300px;
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 20px rgba(212, 163, 115, 0.2);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        /* Main Content */
-        .main-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: var(--spacing-xl) 2rem;
-            padding-bottom: calc(var(--spacing-xl) * 1.5);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.6);
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-       
-        .brewery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .brewery-card {
-            position: relative;
-            background: linear-gradient(135deg, rgba(44, 24, 16, 0.9) 0%, rgba(61, 40, 23, 0.9) 100%);
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 163, 115, 0.2);
-            transition: all 0.5s var(--transition-smooth);
-            backdrop-filter: blur(10px);
-        }
-
-        .brewery-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-gold));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s var(--transition-smooth);
-        }
-
-        .brewery-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .brewery-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(212, 163, 115, 0.3);
-            border-color: var(--color-primary);
-        }
-
-        .card-header {
-            padding: 2rem;
-            position: relative;
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.1) 0%, transparent 100%);
-        }
-
-        .brewery-name {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .brewery-icon {
-            font-size: 2.5rem;
-            filter: drop-shadow(0 0 10px rgba(212, 163, 115, 0.5));
-        }
-
-        .location-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(212, 163, 115, 0.2);
-            border: 1px solid rgba(212, 163, 115, 0.3);
-            border-radius: 50px;
-            color: var(--color-primary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .card-body {
-            padding: 2rem;
-        }
-
-       
-        .card-body-with-image {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .brewery-image-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 16px;
-            border: 1px solid rgba(212, 163, 115, 0.2);
-        }
-
-        .brewery-image {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
-            transition: transform 0.3s var(--transition-smooth);
-        }
-
-        .brewery-image:hover {
-            transform: scale(1.05);
-        }
-
-        .brewery-info {
-            flex: 1;
-        }
-
-        .info-grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            gap: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            border-left: 3px solid var(--color-primary);
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .info-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateX(5px);
-        }
-
-        .info-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .info-content {
-            flex: 1;
-        }
-
-        .info-label {
-            font-size: 0.85rem;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-        }
-
-        .info-text {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        .styles-container {
-            margin-top: 1.5rem;
-        }
-
-        .styles-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .style-tag {
-            padding: 0.5rem 1rem;
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.2), rgba(244, 164, 96, 0.2));
-            border: 1px solid rgba(212, 163, 115, 0.3);
-            border-radius: 8px;
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .style-tag:hover {
-            background: linear-gradient(135deg, rgba(212, 163, 115, 0.3), rgba(244, 164, 96, 0.3));
-            transform: translateY(-2px);
-        }
-
-        .reviews-section {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(212, 163, 115, 0.2);
-        }
-
-        .review-item {
-            position: relative;
-            padding: 1.2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-left: 3px solid var(--color-gold);
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.7);
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .review-item::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 3rem;
-            color: var(--color-primary);
-            opacity: 0.3;
-            font-family: Georgia, serif;
-        }
-
-        .review-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateX(5px);
-        }
-
-        .review-author {
-            display: block;
-            margin-top: 0.5rem;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--color-primary);
-            font-size: 0.9rem;
-        }
-
-        .card-footer {
-            padding: 1.5rem 2rem;
-            background: rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .feature-badge {
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s var(--transition-smooth);
-        }
-
-        .feature-badge:hover {
-            transform: translateY(-2px);
-        }
-
-        .badge-premium {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            color: #1a0f0a;
-        }
-
-        .badge-tourist {
-            background: linear-gradient(135deg, #00CED1, #20B2AA);
-            color: white;
-        }
-
-        .badge-innovative {
-            background: linear-gradient(135deg, #FF69B4, #FF1493);
-            color: white;
-        }
-
-        .badge-fruity {
-            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-            color: white;
-        }
-
-        .badge-urban {
-            background: linear-gradient(135deg, #667EEA, #764BA2);
-            color: white;
-        }
-
-        .badge-national {
-            background: linear-gradient(135deg, #F093FB, #F5576C);
-            color: white;
-        }
-
- 
-        @media (max-width: 1024px) {
-            .brewery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
-
-           
-            .card-body-with-image {
-                grid-template-columns: 220px 1fr;
-                gap: 1.5rem;
-            }
-
-            .hero-title {
-                font-size: clamp(2.5rem, 7vw, 5rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* Hero Mobile */
-            .hero {
-                min-height: 80vh;
-                padding: 3rem 0;
-            }
-
-            .hero-content {
-                padding: 1.5rem;
-            }
-
-            .hero-title {
-                font-size: clamp(2rem, 8vw, 3.5rem);
-            }
-
-            .hero-description {
-                font-size: 1.1rem;
-                margin-bottom: 2rem;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 2rem;
-                margin-top: 2.5rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .stat-label {
-                font-size: 0.85rem;
-            }
-
-            .scroll-indicator {
-                bottom: 2rem;
-            }
-
-            .scroll-indicator svg {
-                width: 24px;
-                height: 24px;
-            }
-
-            /* Filter Section Mobile */
-            .filter-section {
-                padding: 1.5rem 0;
-            }
-
-            .filter-section.is-stuck {
-                padding: 1rem 0;
-            }
-
-            .filter-container {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            .filter-buttons {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.6rem;
-            }
-
-            .filter-btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.85rem;
-                white-space: nowrap;
-            }
-
-            .search-box {
-                width: 100%;
-            }
-
-            .search-input {
-                width: 100%;
-                font-size: 0.9rem;
-                padding: 0.7rem 1.2rem 0.7rem 2.8rem;
-            }
-
-            .search-icon {
-                font-size: 0.9rem;
-            }
-
-            /* Main Content Mobile */
-            .main-content {
-                padding: 3rem 1rem;
-                padding-bottom: 4rem;
-            }
-
-            .section-header {
-                margin-bottom: 2rem;
-            }
-
-            /* Brewery Cards Mobile */
-            .brewery-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .brewery-card {
-                border-radius: 20px;
-            }
-
-            .card-header {
-                padding: 1.5rem;
-            }
-
-            .brewery-name {
-                font-size: 2rem;
-                flex-wrap: wrap;
-                gap: 0.8rem;
-            }
-
-            .brewery-icon {
-                font-size: 2rem;
-            }
-
-            .location-badge {
-                font-size: 0.85rem;
-                padding: 0.4rem 0.8rem;
-            }
-
-            .card-body {
-                padding: 1.5rem;
-            }
-
-            /* Stack image and content vertically on mobile */
-            .card-body-with-image {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .brewery-image-container {
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-            .brewery-image {
-                max-height: 350px;
-            }
-
-            .info-grid {
-                gap: 1.2rem;
-            }
-
-            .info-item {
-                padding: 0.9rem;
-            }
-
-            .info-icon {
-                font-size: 1.3rem;
-            }
-
-            .info-label {
-                font-size: 0.8rem;
-            }
-
-            .info-text {
-                font-size: 0.9rem;
-            }
-
-            .styles-container {
-                margin-top: 1.2rem;
-            }
-
-            .styles-list {
-                gap: 0.4rem;
-            }
-
-            .style-tag {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-            }
-
-            .reviews-section {
-                margin-top: 1.2rem;
-                padding-top: 1.2rem;
-            }
-
-            .review-item {
-                padding: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .review-item::before {
-                font-size: 2.5rem;
-                top: -8px;
-                left: 8px;
-            }
-
-            .review-author {
-                font-size: 0.85rem;
-            }
-
-            .card-footer {
-                padding: 1.2rem 1.5rem;
-                gap: 0.4rem;
-            }
-
-            .feature-badge {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* Extra Small Screens */
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .stat-label {
-                font-size: 0.75rem;
-                letter-spacing: 1px;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1rem;
-                font-size: 0.8rem;
-            }
-
-            .brewery-name {
-                font-size: 1.8rem;
-            }
-
-            .brewery-icon {
-                font-size: 1.8rem;
-            }
-
-            .location-badge {
-                font-size: 0.8rem;
-            }
-
-            .info-label {
-                font-size: 0.75rem;
-            }
-
-            .info-text {
-                font-size: 0.85rem;
-            }
-
-            .style-tag {
-                font-size: 0.75rem;
-                padding: 0.35rem 0.7rem;
-            }
-
-            .review-item {
-                font-size: 0.85rem;
-            }
-
-            .feature-badge {
-                font-size: 0.75rem;
-                padding: 0.35rem 0.7rem;
-            }
-        }
-
-       
-        @media (max-width: 896px) and (orientation: landscape) {
-            .hero {
-                min-height: auto;
-                padding: 2rem 0;
-            }
-
-            .hero-stats {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 1.5rem;
-                justify-content: center;
-            }
-
-            .stat-item {
-                min-width: 150px;
-            }
-
-            .stats-dashboard {
-                padding: 2rem 0;
-            }
-
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .data-viz-grid {
-                gap: 1.5rem;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            overflow-x: hidden;
-            max-width: 100vw;
-        }
-
-     
-        @media (hover: none) and (pointer: coarse) {
-            .filter-btn,
-            .brewery-card,
-            .metric-card,
-            .viz-card,
-            .impact-item {
-                -webkit-tap-highlight-color: transparent;
-            }
-
-            .filter-btn:active {
-                transform: scale(0.95);
-            }
-
-            .brewery-card:active {
-                transform: translateY(-5px) scale(0.98);
-            }
-
-            .metric-card:active,
-            .viz-card:active {
-                transform: translateY(-3px);
-            }
-
-            
-            .brewery-card:hover,
-            .metric-card:hover,
-            .viz-card:hover {
-                transform: none;
-            }
-
-            .brewery-card {
-                transition: transform 0.2s ease;
-            }
-        }
-
-        
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            .brewery-image {
-                image-rendering: -webkit-optimize-contrast;
-            }
-        }
-
-       
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .stat-label {
-                font-size: 0.75rem;
-                letter-spacing: 1px;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .metric-value {
-                font-size: 2rem;
-            }
-
-            .viz-title {
-                font-size: 1.1rem;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1rem;
-                font-size: 0.8rem;
-            }
-
-            .brewery-name {
-                font-size: 1.6rem;
-            }
-
-            .location-badge {
-                font-size: 0.8rem;
-            }
-
-            .bar-label {
-                font-size: 0.75rem;
-            }
-
-            .bar-container {
-                height: 28px;
-            }
-
-            .price-amount {
-                font-size: 1.3rem;
-            }
-
-            .opportunity-percentage {
-                font-size: 2.8rem;
-            }
-        }
-
-        /* Landscape orientation mobile */
-        @media (max-height: 600px) and (orientation: landscape) {
-            .hero {
-                min-height: auto;
-                padding: 2rem 0;
-            }
-
-            .hero-stats {
-                flex-direction: row;
-                gap: 1.5rem;
-            }
-
-            .scroll-indicator {
-                display: none;
-            }
-
-            .stats-dashboard {
-                padding: 2rem 0;
-            }
-        }
-
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            /* Remove hover effects that don't work on touch */
-            .brewery-card:hover {
-                transform: none;
-                box-shadow: 0 10px 30px rgba(212, 163, 115, 0.2);
-            }
-
-            .filter-btn:hover {
-                transform: none;
-            }
-
-            .info-item:hover {
-                transform: none;
-                background: rgba(255, 255, 255, 0.03);
-            }
-
-            .style-tag:hover {
-                transform: none;
-            }
-
-            .review-item:hover {
-                transform: none;
-            }
-
-            .metric-card:hover {
-                transform: none;
-            }
-
-            .impact-item:hover {
-                transform: none;
-            }
-
-            .price-item:hover {
-                transform: none;
-            }
-
-            /* Add active (tap) feedback instead */
-            .filter-btn:active {
-                transform: scale(0.96);
-                opacity: 0.8;
-            }
-
-            .brewery-card:active {
-                transform: scale(0.98);
-            }
-
-            .metric-card:active {
-                transform: scale(0.98);
-            }
-
-            /* Ensure touch targets are large enough (min 44x44px) */
-            .filter-btn {
-                min-height: 44px;
-                min-width: 44px;
-            }
-
-            .search-input {
-                min-height: 44px;
-            }
-
-            /* Better spacing for fat fingers */
-            .filter-buttons {
-                gap: 0.8rem;
-            }
-
-            .styles-list {
-                gap: 0.6rem;
-            }
-
-            /* Prevent zoom on focus for iOS */
-            .search-input {
-                font-size: 16px !important;
-            }
-        }
-
-        /* High DPI screens */
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            /* Sharper borders and shadows */
-            .brewery-card {
-                border-width: 0.5px;
-            }
-
-            .viz-card {
-                border-width: 0.5px;
-            }
-
-            .metric-card {
-                border-width: 0.5px;
-            }
-        }
-
-    
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-
-            .float-animation {
-                animation: none;
-            }
-
-            .scroll-indicator {
-                animation: none;
-            }
-
-            .bar-fill {
-                transition: none;
-            }
-
-            .timeline-bar {
-                transition: none;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            .filter-section,
-            .scroll-indicator {
-                display: none;
-            }
-
-            .brewery-card {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-
-            body {
-                background: white;
-            }
-
-            .brewery-card,
-            .viz-card,
-            .metric-card {
-                border: 1px solid #ccc;
-            }
-        }
-
-       
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        .loading {
-            background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%);
-            background-size: 1000px 100%;
-            animation: shimmer 2s infinite;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="logo.png" alt="GamaTok Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="https://wa.me/51936210916?text=Hola,%20quiero%20más%20información%20sobre%20GamaTok" target="_blank" class="btn-nav">Contáctanos</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1 class="hero-title">Cervezas Artesanales del Perú</h1>
-            <p class="hero-description">
-                Análisis y estudio de las cervezas artesanales en Perú
-            </p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Cervecerías</div>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Tus lives de TikTok</span><br>
+                    ahora serán diferentes
+                </h1>
+                <p class="hero-subtitle">Conecta tu tienda de Gamarra con miles de clientes. Vende más, genera confianza y lleva tu negocio al siguiente nivel con GamaTok.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/51936210916?text=Hola,%20quiero%20comenzar%20con%20GamaTok" target="_blank" class="btn btn-primary">Comenzar Ahora</a>
+                    <a href="#como-funciona" class="btn btn-secondary">Ver Cómo Funciona</a>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Estilos</div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>+200%</h3>
+                        <p>Más ventas</p>
+                    </div>
+                    <div class="stat">
+                        <h3>48h</h3>
+                        <p>Entrega express</p>
+                    </div>
+                    <div class="stat">
+                        <h3>+50</h3>
+                        <p>Tiendas confían</p>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Puntos de Venta</div>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="live-badge">
+                            <span class="live-dot"></span> EN VIVO
+                        </div>
+                        <div class="interaction-icons">
+                            <div class="icon-float">❤️ <span>+1.2k</span></div>
+                            <div class="icon-float">💬 <span>+890</span></div>
+                            <div class="icon-float">🛒 <span>Comprar</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="scroll-indicator">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-        </div>
     </section>
 
-    <!-- Estadisticas -->
-    <section class="stats-dashboard">
-        <div class="stats-container">
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="beneficios">
+        <div class="container">
             <div class="section-header">
-                <h2 class="section-title">La Industria en Números</h2>
-                <p class="section-subtitle">Datos clave del mercado de cerveza artesanal en Perú</p>
+                <h2 class="section-title">¿Por qué elegir <span class="gradient-text">GamaTok</span>?</h2>
+                <p class="section-subtitle">Potencia tus lives de TikTok con herramientas profesionales</p>
             </div>
 
-            <!-- Metricas -->
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">📈</div>
-                    <div class="metric-value">16%</div>
-                    <div class="metric-label">Crecimiento en 2024</div>
-                    <div class="metric-sublabel">Ventas sector artesanal</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">🍺</div>
-                    <div class="metric-value">2.9M</div>
-                    <div class="metric-label">Litros Producidos</div>
-                    <div class="metric-sublabel">Cerveza artesanal 2024</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">🏭</div>
-                    <div class="metric-value">~100</div>
-                    <div class="metric-label">Cervecerías</div>
-                    <div class="metric-sublabel">Grandes y artesanales</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">💼</div>
-                    <div class="metric-value">20K+</div>
-                    <div class="metric-label">Empleos Generados</div>
-                    <div class="metric-sublabel">Directos e indirectos</div>
-                </div>
-            </div>
-
-            <!-- Data Grid -->
-            <div class="data-viz-grid">
-                
-                <!-- REgion -->
-                <div class="viz-card">
-                    <h3 class="viz-title">🗺️ Regiones de Mayor Consumo</h3>
-                    <div class="bar-chart">
-                        <div class="bar-item">
-                            <div class="bar-label">Lima</div>
-                            <div class="bar-container">
-                                <div class="bar-fill" style="width: 100%;">
-                                    <span class="bar-value">#1</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bar-item">
-                            <div class="bar-label">Arequipa</div>
-                            <div class="bar-container">
-                                <div class="bar-fill" style="width: 75%;">
-                                    <span class="bar-value">#2</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bar-item">
-                            <div class="bar-label">Trujillo</div>
-                            <div class="bar-container">
-                                <div class="bar-fill" style="width: 60%;">
-                                    <span class="bar-value">#3</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bar-item">
-                            <div class="bar-label">Cusco</div>
-                            <div class="bar-container">
-                                <div class="bar-fill" style="width: 50%;">
-                                    <span class="bar-value">#4</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bar-item">
-                            <div class="bar-label">Piura</div>
-                            <div class="bar-container">
-                                <div class="bar-fill" style="width: 40%;">
-                                    <span class="bar-value">#5</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
                     </div>
-                    <p class="viz-note">Fuente: SNI, Trome 2024</p>
+                    <h3>Atrae Más Clientes</h3>
+                    <p>Conecta directamente con tu audiencia y convierte espectadores en compradores activos durante tus transmisiones en vivo.</p>
                 </div>
 
-               
-                <div class="viz-card">
-                    <h3 class="viz-title">💰 Precios Promedio</h3>
-                    <div class="price-comparison">
-                        <div class="price-item">
-                            <div class="price-icon">🏪</div>
-                            <div class="price-details">
-                                <div class="price-type">Bodega</div>
-                                <div class="price-amount">S/ 5-7</div>
-                                <div class="price-unit">por botella 630ml</div>
-                            </div>
-                        </div>
-                        <div class="price-item">
-                            <div class="price-icon">🍻</div>
-                            <div class="price-details">
-                                <div class="price-type">Bar/Restaurante</div>
-                                <div class="price-amount">S/ 10-15</div>
-                                <div class="price-unit">por servicio</div>
-                            </div>
-                        </div>
-                        <div class="price-item highlighted">
-                            <div class="price-icon">⭐</div>
-                            <div class="price-details">
-                                <div class="price-type">Artesanal</div>
-                                <div class="price-amount">S/ 15-20</div>
-                                <div class="price-unit">por litro</div>
-                            </div>
-                        </div>
+                <div class="beneficio-card featured">
+                    <div class="badge"></div>
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
                     </div>
-                    <p class="viz-note">Precios actualizados 2024-2025</p>
+                    <h3>Vende Más</h3>
+                    <p>Incrementa tus ventas hasta un 200% con herramientas de conversión optimizadas para lives de TikTok.</p>
                 </div>
 
-                <!-- Growth -->
-                <div class="viz-card">
-                    <h3 class="viz-title">📊 Proyección de Crecimiento</h3>
-                    <div class="growth-viz">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2024</div>
-                            <div class="timeline-value">$2.33 MM</div>
-                            <div class="timeline-bar" style="height: 60%;"></div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2028</div>
-                            <div class="timeline-value">$2.7 MM</div>
-                            <div class="timeline-bar" style="height: 75%;"></div>
-                        </div>
-                        <div class="timeline-item highlighted">
-                            <div class="timeline-year">2034</div>
-                            <div class="timeline-value">$3.2 MM</div>
-                            <div class="timeline-bar" style="height: 100%;"></div>
-                        </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
                     </div>
-                    <div class="growth-rate">
-                        <span class="rate-label">CAGR:</span>
-                        <span class="rate-value">4.90%</span>
-                        <span class="rate-period">2025-2034</span>
-                    </div>
-                    <p class="viz-note">Mercado total de cerveza - Informes de Expertos</p>
+                    <h3>Conexión WhatsApp</h3>
+                    <p>Integración directa con WhatsApp para cerrar ventas y dar seguimiento personalizado a tus clientes.</p>
                 </div>
 
-                <!-- Impacto economico -->
-                <div class="viz-card">
-                    <h3 class="viz-title">💼 Impacto Económico</h3>
-                    <div class="impact-grid">
-                        <div class="impact-item">
-                            <div class="impact-value">1%</div>
-                            <div class="impact-label">del PBI Nacional</div>
-                        </div>
-                        <div class="impact-item">
-                            <div class="impact-value">S/ 4,000M</div>
-                            <div class="impact-label">en impuestos anuales</div>
-                        </div>
-                        <div class="impact-item">
-                            <div class="impact-value">300K</div>
-                            <div class="impact-label">bodegueros beneficiados</div>
-                        </div>
-                        <div class="impact-item">
-                            <div class="impact-value">30%</div>
-                            <div class="impact-label">de ingresos de bodegas</div>
-                        </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
                     </div>
-                    <p class="viz-note">Fuente: SNI, Comité de Fabricantes 2025</p>
+                    <h3>Entrega en 48 Horas</h3>
+                    <p>Tu página lista y funcionando en solo 2 días. Sin complicaciones, sin esperas innecesarias.</p>
                 </div>
 
-                <!-- Consumo -->
-                <div class="viz-card">
-                    <h3 class="viz-title">👥 Consumo Per Cápita</h3>
-                    <div class="consumption-stats">
-                        <div class="consumption-main">
-                            <div class="consumption-number">43.5</div>
-                            <div class="consumption-unit">litros/año</div>
-                            <div class="consumption-detail">Promedio general</div>
-                        </div>
-                        <div class="consumption-secondary">
-                            <div class="consumption-stat">
-                                <span class="stat-label">Mayores de 18:</span>
-                                <span class="stat-value">~60 L</span>
-                            </div>
-                            <div class="consumption-stat">
-                                <span class="stat-label">Gasto anual:</span>
-                                <span class="stat-value">S/ 300-400</span>
-                            </div>
-                        </div>
-                        <div class="comparison-note">
-                            <span>Comparación regional:</span>
-                            <div>🇨🇴 Colombia: 55L | 🇲🇽 México: 65L</div>
-                        </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
                     </div>
-                    <p class="viz-note">Datos SNI 2024-2025</p>
+                    <h3>Hosting Incluido</h3>
+                    <p>Hosting premium incluido por 1 año. Tu página siempre rápida y disponible para tus clientes.</p>
                 </div>
 
-                <!-- Market -->
-                <div class="viz-card highlight-card">
-                    <h3 class="viz-title">🚀 Oportunidad de Mercado</h3>
-                    <div class="opportunity-content">
-                        <div class="opportunity-stat">
-                            <div class="opportunity-label">Población que NO ha probado cerveza artesanal:</div>
-                            <div class="opportunity-percentage">99.5%</div>
-                        </div>
-                        <div class="opportunity-insight">
-                            <p>✨ <strong>Alto potencial de crecimiento</strong></p>
-                            <ul class="opportunity-list">
-                                <li>Mercado artesanal representa solo 0.01% del total</li>
-                                <li>Creciente demanda por productos premium</li>
-                                <li>Expansión de microcervecerías en regiones</li>
-                                <li>Mayor interés en ingredientes locales</li>
-                            </ul>
-                        </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                        </svg>
                     </div>
-                    <p class="viz-note">Análisis UCAP, Agraria.pe 2024</p>
+                    <h3>Subdominio Personalizado</h3>
+                    <p>Tu marca, tu dominio. Subdominio personalizado incluido: tumarca.gamatók.com</p>
                 </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    
-    <section class="filter-section">
-        <div class="filter-container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todas</button>
-                <button class="filter-btn" data-filter="lima">Lima</button>
-                <button class="filter-btn" data-filter="norte">Norte</button>
-                <button class="filter-btn" data-filter="sur">Sur</button>
-                <button class="filter-btn" data-filter="sierra">Sierra</button>
-            </div>
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input type="text" class="search-input" placeholder="Buscar cervecería..." id="searchInput">
             </div>
         </div>
     </section>
 
-   
-    <main class="main-content" id="cervecerias">
-        <div class="section-header">
-            <h2 class="section-title">Nuestras Cervecerías</h2>
-            <p class="section-subtitle">Cada una con su historia única y sabores inolvidables</p>
+    <!-- Cómo Funciona Section -->
+    <section id="como-funciona" class="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Cómo <span class="gradient-text">funciona</span>?</h2>
+                <p class="section-subtitle">7 pasos simples para transformar tus lives de TikTok</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Contáctanos por WhatsApp</h3>
+                        <p>Escríbenos para comenzar el proceso. Estamos listos para ayudarte.</p>
+                    </div>
+                    <div class="step-icon">📱</div>
+                </div>
+
+                <div class="step step-reverse">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Envíanos tu enlace de TikTok</h3>
+                        <p>Compártenos el link de tu cuenta de TikTok para vincularlo a tu landing.</p>
+                    </div>
+                    <div class="step-icon">🔗</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Configuramos tus fechas de Live</h3>
+                        <p>Nos indicas los días y horarios en que harás tus transmisiones en vivo.</p>
+                    </div>
+                    <div class="step-icon">📅</div>
+                </div>
+
+                <div class="step step-reverse">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Conectamos el enlace de tu Live en tu Landing Page</h3>
+                        <p>Integramos tu TikTok con tu página personalizada para que tus clientes te encuentren fácilmente.</p>
+                    </div>
+                    <div class="step-icon">⚙️</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Te entregamos tu landing terminada</h3>
+                        <p>Recibe tu página con los colores de tu marca y productos destacados.</p>
+                    </div>
+                    <div class="step-icon">🎨</div>
+                </div>
+
+                <div class="step step-reverse">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                        <h3>Promociona tu landing</h3>
+                        <p>Comparte tu nueva página con todos tus clientes y en tus redes sociales.</p>
+                    </div>
+                    <div class="step-icon">📢</div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">07</div>
+                    <div class="step-content">
+                        <h3>¡Vende más!</h3>
+                        <p>Disfruta de mayores ventas con tu landing profesional y tus lives de TikTok.</p>
+                    </div>
+                    <div class="step-icon">🚀</div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="brewery-grid" id="breweryGrid">
-            
-            <!-- Bohorquez -->
-            <article class="brewery-card" data-region="sur">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">🍺</span>
-                        Bohorquez
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Ica, Los Aquijes
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Microcervecería local con presencia en hostales y bares. Alcance regional en el sur del país.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Taproom propio, bares locales, hostales, venta directa por redes sociales</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">IPA</span>
-                            <span class="style-tag">Blonde Ale</span>
-                            <span class="style-tag">Red Ale</span>
-                            <span class="style-tag">Stout con Algarrobina</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Reseñas</div>
-                        <div class="review-item">
-                            Stout Con Algarrobina… 7% ABV
-                            <span class="review-author">— Untappd</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-innovative">🌟 Innovación Local</span>
-                </div>
-            </article>
+    <!-- Planes Section -->
+    <section id="planes" class="planes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro <span class="gradient-text">plan único</span></h2>
+                <p class="section-subtitle">Todo lo que necesitas para potenciar tus lives de TikTok</p>
+            </div>
 
-            <!-- Bardock Beer Company -->
-            <article class="brewery-card" data-region="sierra">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">🏔️</span>
-                        Bardock Beer
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Valle Sagrado, Urubamba (Cusco)
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Cervecería-taproom orientada al turismo con excelente posicionamiento entre visitantes extranjeros.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Taproom/restaurante propio, bares turísticos en Urubamba y Cusco</div>
-                            </div>
+            <div class="planes-grid">
+                <div class="plan-card plan-popular">
+                    <div class="plan-badge">PLAN ÚNICO</div>
+                    <div class="plan-header">
+                        <h3>GamaTok</h3>
+                        <div class="plan-price">
+                            <span class="currency">S/</span>
+                            <span class="amount">299</span>
+                            <span class="period">/pago único</span>
                         </div>
                     </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">Lagers</span>
-                            <span class="style-tag">Stouts</span>
-                            <span class="style-tag">Cerveza con Hoja de Coca</span>
-                            <span class="style-tag">Experimentales</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Reseñas</div>
-                        <div class="review-item">
-                            Muy valorada en TripAdvisor por la experiencia turística y la ambientación única del Valle Sagrado
-                            <span class="review-author">— TripAdvisor</span>
-                        </div>
-                    </div>
+                    <ul class="plan-features">
+                        <li>✓ Link en tu bio TikTok</li>
+                        <li>✓ Registro de clientes para que se le notifique tu Live</li>
+                        <li>✓ Calendario de tus Lives</li>
+                        <li>✓ Diseño Premium</li>
+                        <li>✓ Botón de Pedidos</li>
+                        <li>✓ Galería de fotos</li>
+                        <li>✓ Estadísticas de Visitas a tus Lives</li>
+                        <li>✓ Soporte</li>
+                        <li>✓ Subdominio propio</li>
+                    </ul>
+                    <a href="https://wa.me/51936210916?text=Hola,%20quiero%20contratar%20el%20plan%20GamaTok%20de%20S/299" target="_blank" class="btn-plan btn-plan-popular">Contratar Ahora</a>
                 </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-tourist">✈️ Favorito Turístico</span>
-                    <span class="feature-badge badge-innovative">🌿 Ingredientes Locales</span>
-                </div>
-            </article>
-
-            <!-- Nowhere -->
-            <article class="brewery-card" data-region="sur">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">🌋</span>
-                        Nowhere
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Arequipa
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Brewpub local con excelente reputación. Popular entre jóvenes y turistas en la Ciudad Blanca.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Brewpub propio, restaurantes locales, ferias gastronómicas y eventos cerveceros</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">IPA</span>
-                            <span class="style-tag">Cream Ale con Maíz Morado</span>
-                            <span class="style-tag">Stouts</span>
-                            <span class="style-tag">Cervezas Frutadas</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Reconocimientos</div>
-                        <div class="review-item">
-                            Reconocida como una de las marcas más populares entre consumidores limeños de craft beer
-                            <span class="review-author">— Estudio ISIL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-innovative">🎨 Sabores Únicos</span>
-                    <span class="feature-badge badge-urban">🏙️ Escena Urbana</span>
-                </div>
-            </article>
-
-            <!-- Tierra Virgen -->
-            <article class="brewery-card" data-region="norte">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">🫐</span>
-                        Tierra Virgen
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Trujillo, La Libertad
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Marca regional con presencia activa en eventos cerveceros. Distribución concentrada en el norte del Perú.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Bares y restaurantes de Trujillo, eventos regionales, venta directa online</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">Blueberry Witbier</span>
-                            <span class="style-tag">Saisons</span>
-                            <span class="style-tag">Irish Red Ale</span>
-                            <span class="style-tag">Fruit Beers</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Especialidad</div>
-                        <div class="review-item">
-                            Reconocida por su enfoque en cervezas frutales elaboradas con ingredientes locales del norte peruano
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-fruity">🍓 Cervezas Frutales</span>
-                    <span class="feature-badge badge-innovative">🌾 Ingredientes Regionales</span>
-                </div>
-            </article>
-
-            <!-- Nuevo Mundo -->
-            <article class="brewery-card" data-region="lima">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">🌊</span>
-                        Nuevo Mundo
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Lima, Miraflores
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Brewpub urbano muy bien valorado con ubicación estratégica. Alta visibilidad en redes sociales y circuito turístico.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Taproom/brewpub en Miraflores, bares aliados, eventos de cerveza artesanal en Lima</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">Pilsner</span>
-                            <span class="style-tag">IPA</span>
-                            <span class="style-tag">Porter</span>
-                            <span class="style-tag">Belgian Dark Ale</span>
-                            <span class="style-tag">Experimentales</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Reseñas</div>
-                        <div class="review-item">
-                            Excelente bar y sus cervezas son realmente artesanales. Los recomiendo.
-                            <span class="review-author">— J. Alfredo Saavedra</span>
-                        </div>
-                        <div class="review-item">
-                            Buen ambiente y buen servicio. Me pedí esta chela que recomiendo. 10% de alcohol 👍🏽
-                            <span class="review-author">— Noelia Wong</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-urban">🏙️ Ubicación Estratégica</span>
-                    <span class="feature-badge badge-premium">⭐ Alta Valoración</span>
-                </div>
-            </article>
-
-            <!-- Sierra Andina -->
-            <article class="brewery-card" data-region="sierra">
-                <div class="card-header">
-                    <h3 class="brewery-name">
-                        <span class="brewery-icon">⭐</span>
-                        Sierra Andina
-                    </h3>
-                    <span class="location-badge">
-                        <span>📍</span>
-                        Huaraz, Áncash
-                    </span>
-                </div>
-                
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-icon">📊</span>
-                            <div class="info-content">
-                                <div class="info-label">Datos Clave</div>
-                                <div class="info-text">Fundada en 2011. Más de 1,000 puntos de venta con distribución nacional y exportaciones ocasionales. Líder del mercado peruano.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-icon">🏪</span>
-                            <div class="info-content">
-                                <div class="info-label">Puntos de Venta</div>
-                                <div class="info-text">Supermercados nacionales, tiendas de conveniencia, taprooms en Huaraz y Lima</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="styles-container">
-                        <div class="info-label">🍻 Estilos Disponibles</div>
-                        <div class="styles-list">
-                            <span class="style-tag">Shaman IPA</span>
-                            <span class="style-tag">Pachacutec Imperial Ale</span>
-                            <span class="style-tag">Inti Golden Ale</span>
-                            <span class="style-tag">Huaracina Pale Ale</span>
-                            <span class="style-tag">Coconut Porter</span>
-                        </div>
-                    </div>
-                    
-                    <div class="reviews-section">
-                        <div class="info-label">⭐ Reseñas</div>
-                        <div class="review-item">
-                            Sierra Andina, muy buenas.
-                            <span class="review-author">— Usuario Reddit</span>
-                        </div>
-                        <div class="review-item">
-                            Valorado 3.00 sobre 5. Los visitantes destacan la vista, la atención y la experiencia de degustación.
-                            <span class="review-author">— BarraGrau.pe / TripAdvisor</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <span class="feature-badge badge-national">👑 Líder Nacional</span>
-                    <span class="feature-badge badge-premium">🌎 Exportación</span>
-                    <span class="feature-badge badge-tourist">📍 +1000 Puntos</span>
-                </div>
-            </article>
-
+            </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Testimonios Section -->
+    <section class="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
+                <p class="section-subtitle">Tiendas de Gamarra que ya confían en GamaTok</p>
+            </div>
 
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-text">"Mis ventas en TikTok se triplicaron desde que uso GamaTok. Ahora todos mis clientes me encuentran fácilmente y puedo atenderlos por WhatsApp."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Moda Bella</h4>
+                            <p>Galería El Dorado</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="testimonio-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-text">"La entrega en 48 horas es real. En dos días ya estaba vendiendo con mi página personalizada. El mejor servicio que he contratado."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">F</div>
+                        <div class="author-info">
+                            <h4>Fashion Store Perú</h4>
+                            <p>Jr. Gamarra 580</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="testimonio-card">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonio-text">"Profesionalismo total. Mi tienda ahora tiene una imagen increíble y mis lives de TikTok tienen mucha más interacción. 100% recomendado."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Rosy Fashion</h4>
+                            <p>Centro Comercial Gamarra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas <span class="gradient-text">frecuentes</span></h2>
+            </div>
 
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué es un subdominio?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Un subdominio es tu dirección web personalizada. Por ejemplo: tumarca.gamatók.com. Es la URL única donde tus clientes podrán encontrar tu landing page y acceder a tus lives de TikTok.</p>
+                    </div>
+                </div>
 
-    <script>
-        // Sticky filter bar effect
-        const filterSection = document.querySelector('.filter-section');
-        if (filterSection) {
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.intersectionRatio < 1) {
-                        filterSection.classList.add('is-stuck');
-                    } else {
-                        filterSection.classList.remove('is-stuck');
-                    }
-                },
-                { threshold: [1], rootMargin: '-1px 0px 0px 0px' }
-            );
-            observer.observe(filterSection);
-        }
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Me van a asesorar en el uso de mi Landing?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Te brindamos asesoría completa sobre cómo usar tu landing page, cómo promocionarla en tus redes y sacarle el máximo provecho para aumentar tus ventas.</p>
+                    </div>
+                </div>
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const breweryCards = document.querySelectorAll('.brewery-card');
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Tiene un costo anual de mantenimiento?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, tiene un costo de S/ 50 soles al año (aproximadamente $15 dólares) solo si deseas continuar después del primer año. Este costo cubre el hosting, dominio y mantenimiento de tu página.</p>
+                    </div>
+                </div>
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Necesito conocimientos técnicos?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para nada. Nosotros nos encargamos de todo el aspecto técnico. Tú solo necesitas enviarnos la información de tu negocio, fotos y productos. Nosotros hacemos el resto.</p>
+                    </div>
+                </div>
 
-                const filter = button.getAttribute('data-filter');
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Realmente se entrega en 48 horas?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, una vez que nos proporciones toda la información necesaria (logo, colores, fotos, enlace de TikTok), tu landing page estará lista en máximo 48 horas hábiles, completamente funcional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                breweryCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        const region = card.getAttribute('data-region');
-                        if (region === filter) {
-                            card.style.display = 'block';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'scale(1)';
-                            }, 10);
-                        } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'scale(0.9)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
-                        }
-                    }
-                });
-            });
-        });
+    <!-- CTA Final Section -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para llevar tus lives de TikTok al siguiente nivel?</h2>
+                <p>Únete a cientos de tiendas de Gamarra que ya están vendiendo más con GamaTok</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/51936210916?text=Hola,%20quiero%20más%20información%20sobre%20GamaTok" target="_blank" class="btn btn-primary btn-large">Comenzar Ahora</a>
+                    <a href="https://wa.me/51936210916?text=Hola,%20quiero%20contratar%20GamaTok%20para%20mi%20tienda" target="_blank" class="btn btn-whatsapp btn-large">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Escribir por WhatsApp
+                    </a>
+                </div>
+                <p class="cta-guarantee">🔒 Garantía de satisfacción al 100% o te devolvemos tu dinero</p>
+            </div>
+        </div>
+    </section>
 
-        // Search functionality
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="contacto-content">
+                <div class="contacto-info-center">
+                    <h2>¡Estamos listos para ayudarte!</h2>
+                    <p>Contáctanos por WhatsApp y comienza a vender más con tus lives de TikTok</p>
 
-            breweryCards.forEach(card => {
-                const breweryName = card.querySelector('.brewery-name').textContent.toLowerCase();
-                const location = card.querySelector('.location-badge').textContent.toLowerCase();
+                    <div class="info-items-center">
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+51 936 210 916</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Gamarra, La Victoria - Lima</p>
+                            </div>
+                        </div>
+                    </div>
 
-                if (breweryName.includes(searchTerm) || location.includes(searchTerm)) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                } else {
-                    card.style.opacity = '0';
-                    setTimeout(() => {
-                        if (!card.style.opacity || card.style.opacity === '0') {
-                            card.style.display = 'none';
-                        }
-                    }, 300);
-                }
-            });
-        });
+                    <a href="https://wa.me/51936210916?text=Hola,%20quiero%20más%20información%20sobre%20GamaTok" target="_blank" class="btn btn-whatsapp btn-large" style="margin-top: 2rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Escribir por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-simple">
+                <div class="logo">
+                    <img src="logo.png" alt="GamaTok Logo" class="logo-img">
+                </div>
+                <p>&copy; 2025 GamaTok. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all brewery cards
-        breweryCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Counter animation for stats
-        const animateCounter = (element, target, duration) => {
-            let current = 0;
-            const increment = target / (duration / 16);
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target + (target === 6 ? '' : '+');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + (target === 6 ? '' : '+');
-                }
-            }, 16);
-        };
-
-        // Trigger counter animation when stats are visible
-        const statObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = document.querySelectorAll('.stat-number');
-                    const targets = [6, 20, 1000];
-                    statNumbers.forEach((stat, index) => {
-                        animateCounter(stat, targets[index], 2000);
-                    });
-                    statObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const heroStats = document.querySelector('.hero-stats');
-        if (heroStats) {
-            statObserver.observe(heroStats);
-        }
-
-        // Check if mobile for observer threshold
-        const isMobile = window.innerWidth <= 768;
-
-        // Animate bars and numbers when stats section comes into view
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Detect if mobile
-                    const isMobileNow = window.innerWidth <= 768;
-                    const delay = prefersReducedMotion ? 0 : (isMobileNow ? 50 : 100);
-
-                    // Animate bar charts
-                    const bars = entry.target.querySelectorAll('.bar-fill');
-                    bars.forEach((bar, index) => {
-                        setTimeout(() => {
-                            bar.style.opacity = '1';
-                        }, index * delay);
-                    });
-
-                    // Animate timeline bars
-                    const timelineBars = entry.target.querySelectorAll('.timeline-bar');
-                    timelineBars.forEach((bar, index) => {
-                        setTimeout(() => {
-                            bar.style.opacity = '1';
-                        }, index * (delay * 2));
-                    });
-
-                    // Animate metric cards
-                    const metricCards = entry.target.querySelectorAll('.metric-card');
-                    metricCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, index * delay);
-                    });
-
-                    // Animate viz cards
-                    const vizCards = entry.target.querySelectorAll('.viz-card');
-                    vizCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, (index + 2) * delay);
-                    });
-
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { 
-            threshold: isMobile ? 0.05 : 0.15,
-            rootMargin: '0px 0px -30px 0px'
-        });
-
-        // Observe stats section
-        const statsSection = document.querySelector('.stats-dashboard');
-        if (statsSection) {
-            // Set initial states
-            document.querySelectorAll('.bar-fill').forEach(bar => {
-                bar.style.opacity = '0';
-                bar.style.transition = 'opacity 0.5s ease-out';
-            });
-            document.querySelectorAll('.timeline-bar').forEach(bar => {
-                bar.style.opacity = '0';
-                bar.style.transition = 'opacity 0.6s ease-out';
-            });
-            document.querySelectorAll('.metric-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            });
-            document.querySelectorAll('.viz-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            });
-            
-            statsObserver.observe(statsSection);
-        }
-
-        // Optimize animations on resize
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                // Re-check mobile state
-                const nowMobile = window.innerWidth <= 768;
-                // Update any animation-dependent values if needed
-            }, 250);
-        });
-
-        // Reduce motion for users who prefer it
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.bar-fill, .timeline-bar, .metric-card, .viz-card').forEach(element => {
-                element.style.transition = 'none';
-            });
-        }
-
-        // Optimize scroll performance with RAF
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }, { passive: true });
-
-        // Prevent iOS zoom on input focus (keep font-size at 16px minimum)
-        if (isMobile && /iPhone|iPad|iPod/.test(navigator.userAgent)) {
-            const viewportMeta = document.querySelector('meta[name="viewport"]');
-            if (viewportMeta) {
-                viewportMeta.setAttribute('content', 
-                    'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
-                );
-            }
-        }
-
-        // Smooth scrolling for browsers that don't support CSS scroll-behavior
-        if (!prefersReducedMotion && !('scrollBehavior' in document.documentElement.style)) {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Performance optimization: Lazy load images if IntersectionObserver is supported
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                        }
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
